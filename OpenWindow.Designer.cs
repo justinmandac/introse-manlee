@@ -1,6 +1,6 @@
 ﻿namespace introseHHC
 {
-    partial class Form1
+    partial class OpenWindow
     {
         /// <summary>
         /// Required designer variable.
