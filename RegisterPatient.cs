@@ -15,5 +15,10 @@ namespace introseHHC
         {
             InitializeComponent();
         }
+
+        private void RegisterPatient_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
