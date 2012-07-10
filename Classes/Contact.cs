@@ -5,8 +5,9 @@ using System.Text;
 
 namespace introseHHC.Classes
 {
-    class Person
+    class Contact
     {
-
+        private string label;
+        private uint contNum;
     }
 }
