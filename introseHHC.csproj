@@ -54,6 +54,12 @@
     <Compile Include="Classes\FaceSheetTable.cs" />
     <Compile Include="Classes\Patient.cs" />
     <Compile Include="Classes\Person.cs" />
+    <Compile Include="Forms\RegisterPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterPatient.Designer.cs">
+      <DependentUpon>RegisterPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RegisterClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,12 +74,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Forms\RegisterPatient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\RegisterPatient.Designer.cs">
+    <EmbeddedResource Include="Forms\RegisterPatient.resx">
       <DependentUpon>RegisterPatient.cs</DependentUpon>
-    </Compile>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegisterClient.resx">
       <DependentUpon>RegisterClient.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,9 +92,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\RegisterPatient.resx">
-      <DependentUpon>RegisterPatient.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
