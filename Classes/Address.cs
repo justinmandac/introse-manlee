@@ -14,7 +14,12 @@ namespace introseHHC.Classes
 
         public Address(uint n, string st, string ct, string rgn)
         {
-
+            this.hNum = n;
+            street = st;
+            city = ct;
+            region = rgn;
         }
+
+        
     }
 }

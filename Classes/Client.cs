@@ -7,7 +7,7 @@ namespace introseHHC.Classes
 {
     class Client : Person
     {
-        private string designation;
+        private uint ID;
         private string posRel;
     }
 }

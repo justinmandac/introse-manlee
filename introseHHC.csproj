@@ -50,8 +50,16 @@
     <Compile Include="Classes\Address.cs" />
     <Compile Include="Classes\Client.cs" />
     <Compile Include="Classes\Contact.cs" />
+    <Compile Include="Classes\FaceSheet.cs" />
+    <Compile Include="Classes\FaceSheetTable.cs" />
     <Compile Include="Classes\Patient.cs" />
     <Compile Include="Classes\Person.cs" />
+    <Compile Include="FaceSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaceSheet.Designer.cs">
+      <DependentUpon>FaceSheet.cs</DependentUpon>
+    </Compile>
     <Compile Include="OpenWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +74,9 @@
     <Compile Include="RegisterPatient.Designer.cs">
       <DependentUpon>RegisterPatient.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FaceSheet.resx">
+      <DependentUpon>FaceSheet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OpenWindow.resx">
       <DependentUpon>OpenWindow.cs</DependentUpon>
     </EmbeddedResource>

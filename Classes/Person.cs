@@ -7,6 +7,8 @@ namespace introseHHC.Classes
 {
     class Person
     {
+        private uint ID;
+        private string desig; //designation
         private string sName;
         private string fName;
         private string mName;

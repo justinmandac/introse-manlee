@@ -62,6 +62,7 @@
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nameLabel
@@ -297,7 +298,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 34);
+            this.button2.Location = new System.Drawing.Point(12, 37);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 27;
@@ -306,7 +307,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(13, 82);
+            this.button3.Location = new System.Drawing.Point(12, 82);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 28;
@@ -315,7 +316,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(13, 130);
+            this.button4.Location = new System.Drawing.Point(12, 126);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 29;
@@ -358,11 +359,21 @@
             this.comboBox4.TabIndex = 33;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(12, 169);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 46);
+            this.button5.TabIndex = 34;
+            this.button5.Text = "Register Face Sheet";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // RegisterPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(513, 394);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox12);
@@ -441,5 +452,6 @@
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Button button5;
     }
 }
