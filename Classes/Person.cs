@@ -17,6 +17,7 @@ namespace introseHHC.Classes
         private short age;
         private DateTime birthDate;
         private LinkedList <Contact> contList; // Contact numbers 
+        private string educAttainment;
 
         public Person()
         {

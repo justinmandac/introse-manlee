@@ -9,5 +9,10 @@ namespace introseHHC.Classes
     {
         private string label;
         private uint contNum;
+
+        public Contact(string l, uint num)
+        {
+
+        }
     }
 }
