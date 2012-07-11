@@ -58,6 +58,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // nameLabel
@@ -216,7 +220,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(333, 300);
+            this.button1.Location = new System.Drawing.Point(333, 297);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 18;
@@ -312,11 +316,50 @@
             this.button4.Text = "Reset";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(116, 340);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(91, 13);
+            this.label8.TabIndex = 30;
+            this.label8.Text = "E-Mail Address";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(213, 337);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(195, 20);
+            this.textBox12.TabIndex = 31;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(119, 166);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(138, 13);
+            this.label9.TabIndex = 32;
+            this.label9.Text = "Educational Attainment";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(263, 163);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(145, 21);
+            this.comboBox4.TabIndex = 33;
+            // 
             // RegisterPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(513, 385);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -387,5 +430,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBox4;
     }
 }
