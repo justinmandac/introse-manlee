@@ -30,5 +30,43 @@ namespace introseHHC.Classes
         private float hcSubtotal;
         private float hcNoPax;
         private float hcTotal;
+
+        public FaceSheetTable()
+        {
+
+
+        }
+
+        public void setMDFields(float bp, float meals, float over, float nd, float hp, float trans, float smthing,
+            float lwt, float sbtotal, float npax, float total)
+        {
+            //lagay pa ng error checking or baka sa gui na rin yun.
+            mdBP = bp;
+            mdHolPay = hp;
+            mdMeals = meals;
+            mdOver = over;
+            mdNDiff = nd;
+            mdTrans = trans;
+            mdSomething = smthing;
+            mdLessWT = lwt;
+            mdSubtotal = sbtotal;
+            mdNoPax = npax;
+            mdTotal = total;
+        }
+        public void setHCFields(float bp, float meals, float over, float nd, float hp, float trans, float smthing,
+            float lwt, float sbtotal, float npax, float total)
+        {
+            hcBP = bp;
+            hcHolPay = hp;
+            hcMeals = meals;
+            hcOver = over;
+            hcNDiff = nd;
+            hcTrans = trans;
+            hcSomething = smthing;
+            hcLessWT = lwt;
+            hcSubtotal = sbtotal;
+            hcNoPax = npax;
+            hcTotal = total;
+        }
     }
 }

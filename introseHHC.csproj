@@ -54,30 +54,30 @@
     <Compile Include="Classes\FaceSheetTable.cs" />
     <Compile Include="Classes\Patient.cs" />
     <Compile Include="Classes\Person.cs" />
-    <Compile Include="FaceSheet.cs">
+    <Compile Include="Forms\RegisterClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FaceSheet.Designer.cs">
-      <DependentUpon>FaceSheet.cs</DependentUpon>
+    <Compile Include="Forms\RegisterClient.Designer.cs">
+      <DependentUpon>RegisterClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="OpenWindow.cs">
+    <Compile Include="Forms\OpenWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OpenWindow.Designer.cs">
+    <Compile Include="Forms\OpenWindow.Designer.cs">
       <DependentUpon>OpenWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegisterPatient.cs">
+    <Compile Include="Forms\RegisterPatient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisterPatient.Designer.cs">
+    <Compile Include="Forms\RegisterPatient.Designer.cs">
       <DependentUpon>RegisterPatient.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FaceSheet.resx">
-      <DependentUpon>FaceSheet.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\RegisterClient.resx">
+      <DependentUpon>RegisterClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OpenWindow.resx">
+    <EmbeddedResource Include="Forms\OpenWindow.resx">
       <DependentUpon>OpenWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -89,7 +89,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RegisterPatient.resx">
+    <EmbeddedResource Include="Forms\RegisterPatient.resx">
       <DependentUpon>RegisterPatient.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

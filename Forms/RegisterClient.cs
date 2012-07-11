@@ -55,5 +55,10 @@ namespace introseHHC
         {
 
         }
+
+        private void splitter1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
     }
 }
