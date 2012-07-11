@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Contact.cs" />
+    <Compile Include="Classes\Person.cs" />
     <Compile Include="OpenWindow.cs">
       <SubType>Form</SubType>
     </Compile>
