@@ -9,5 +9,6 @@ namespace introseHHC.Objects
     {
         private string discipline;
         private int id;
+
     }
 }
