@@ -8,3 +8,4 @@ C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\intros
 C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.pdb
 C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.RegForms.Login.resources
 C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.RegForms.RegisterPatientTab.resources
+C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.RegForms.MainMenu.resources

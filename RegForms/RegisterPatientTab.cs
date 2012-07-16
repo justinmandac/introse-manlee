@@ -22,8 +22,30 @@ namespace introseHHC.RegForms
             this.tabPage3.Text = "Requirements";
             this.tabPage4.Text = "Details";
 
-         
+        }
 
+        private void caseMgmtCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (caseMgmtCB.Checked == false)
+            {
+                caseMgmtBox.Enabled = false;
+            }
+            else
+            {
+                caseMgmtBox.Enabled = true;
+            }
+        }
+
+        private void hvacCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (hvacCB.Checked == false)
+            {
+                hvacCoB.Enabled = false;
+            }
+            else
+            {
+                hvacCoB.Enabled = true;
+            }
         }
 
 
