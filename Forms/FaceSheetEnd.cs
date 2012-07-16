@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace introseHHC.Forms
 {
-    public partial class RegisterClient : Form
+    public partial class FaceSheetEnd : Form
     {
-        public RegisterClient()
+        public FaceSheetEnd()
         {
             InitializeComponent();
         }

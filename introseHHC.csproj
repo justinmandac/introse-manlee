@@ -54,17 +54,17 @@
     <Compile Include="Classes\FaceSheetTable.cs" />
     <Compile Include="Classes\Patient.cs" />
     <Compile Include="Classes\Person.cs" />
-    <Compile Include="Forms\RegisterPatient.cs">
+    <Compile Include="Forms\FaceSheet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\RegisterPatient.Designer.cs">
-      <DependentUpon>RegisterPatient.cs</DependentUpon>
+    <Compile Include="Forms\FaceSheet.Designer.cs">
+      <DependentUpon>FaceSheet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RegisterClient.cs">
+    <Compile Include="Forms\FaceSheetEnd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\RegisterClient.Designer.cs">
-      <DependentUpon>RegisterClient.cs</DependentUpon>
+    <Compile Include="Forms\FaceSheetEnd.Designer.cs">
+      <DependentUpon>FaceSheetEnd.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\OpenWindow.cs">
       <SubType>Form</SubType>
@@ -72,16 +72,34 @@
     <Compile Include="Forms\OpenWindow.Designer.cs">
       <DependentUpon>OpenWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RegisterClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterClient.Designer.cs">
+      <DependentUpon>RegisterClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegisterPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterPatient.Designer.cs">
+      <DependentUpon>RegisterPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\RegisterPatient.resx">
-      <DependentUpon>RegisterPatient.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FaceSheet.resx">
+      <DependentUpon>FaceSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FaceSheetEnd.resx">
+      <DependentUpon>FaceSheetEnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OpenWindow.resx">
+      <DependentUpon>OpenWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegisterClient.resx">
       <DependentUpon>RegisterClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\OpenWindow.resx">
-      <DependentUpon>OpenWindow.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\RegisterPatient.resx">
+      <DependentUpon>RegisterPatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
