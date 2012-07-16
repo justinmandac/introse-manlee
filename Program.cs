@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using introseHHC.RegForms;
+
 
 namespace introseHHC
 {
+
     static class Program
     {
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +20,11 @@ namespace introseHHC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OpenWindow());
+           Application.Run( new RegisterPatientTab() );
+            
+
         }
+
+      
     }
 }

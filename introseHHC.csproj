@@ -47,59 +47,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Address.cs" />
-    <Compile Include="Classes\Client.cs" />
-    <Compile Include="Classes\Contact.cs" />
-    <Compile Include="Classes\FaceSheet.cs" />
-    <Compile Include="Classes\FaceSheetTable.cs" />
-    <Compile Include="Classes\Patient.cs" />
-    <Compile Include="Classes\Person.cs" />
-    <Compile Include="Forms\FaceSheet.cs">
+    <Compile Include="Objects\Person.cs" />
+    <Compile Include="RegForms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FaceSheet.Designer.cs">
-      <DependentUpon>FaceSheet.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FaceSheetEnd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FaceSheetEnd.Designer.cs">
-      <DependentUpon>FaceSheetEnd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\OpenWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\OpenWindow.Designer.cs">
-      <DependentUpon>OpenWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\RegisterClient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\RegisterClient.Designer.cs">
-      <DependentUpon>RegisterClient.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\RegisterPatient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\RegisterPatient.Designer.cs">
-      <DependentUpon>RegisterPatient.cs</DependentUpon>
+    <Compile Include="RegForms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\FaceSheet.resx">
-      <DependentUpon>FaceSheet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FaceSheetEnd.resx">
-      <DependentUpon>FaceSheetEnd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\OpenWindow.resx">
-      <DependentUpon>OpenWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RegisterClient.resx">
-      <DependentUpon>RegisterClient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RegisterPatient.resx">
-      <DependentUpon>RegisterPatient.cs</DependentUpon>
+    <Compile Include="RegForms\RegisterPatientTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegForms\RegisterPatientTab.Designer.cs">
+      <DependentUpon>RegisterPatientTab.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RegForms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,6 +74,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegForms\RegisterPatientTab.resx">
+      <DependentUpon>RegisterPatientTab.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -120,6 +87,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

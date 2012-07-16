@@ -6,14 +6,20 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using introseHHC.RegForms;
 
-namespace introseHHC.Forms
+namespace introseHHC.RegForms
 {
-    public partial class RegisterClient : Form
+    public partial class Login : Form
     {
-        public RegisterClient()
+        public Login()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
