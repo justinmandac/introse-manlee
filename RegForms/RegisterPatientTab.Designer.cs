@@ -64,11 +64,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -102,6 +97,7 @@
             this.label25 = new System.Windows.Forms.Label();
             this.comboBox10 = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label27 = new System.Windows.Forms.Label();
             this.textBox29 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -149,6 +145,8 @@
             this.comboBox12 = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.textBox52 = new System.Windows.Forms.TextBox();
             this.textBox53 = new System.Windows.Forms.TextBox();
             this.textBox54 = new System.Windows.Forms.TextBox();
@@ -164,8 +162,10 @@
             this.label47 = new System.Windows.Forms.Label();
             this.textBox58 = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -464,6 +464,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(83, 20);
             this.textBox3.TabIndex = 43;
+            this.textBox3.Text = "Middle Name";
             // 
             // textBox2
             // 
@@ -471,6 +472,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(118, 20);
             this.textBox2.TabIndex = 42;
+            this.textBox2.Text = "First Name";
             // 
             // textBox1
             // 
@@ -478,6 +480,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(106, 20);
             this.textBox1.TabIndex = 41;
+            this.textBox1.Text = "Surname";
             // 
             // label2
             // 
@@ -492,6 +495,11 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "",
+            "Mr.",
+            "Ms.",
+            "Mrs."});
             this.comboBox1.Location = new System.Drawing.Point(83, 16);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
@@ -549,61 +557,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.label27);
-            this.tabPage3.Controls.Add(this.textBox29);
-            this.tabPage3.Controls.Add(this.tableLayoutPanel1);
-            this.tabPage3.Controls.Add(this.comboBox11);
-            this.tabPage3.Controls.Add(this.checkBox5);
-            this.tabPage3.Controls.Add(this.checkBox4);
-            this.tabPage3.Controls.Add(this.checkBox3);
-            this.tabPage3.Controls.Add(this.checkBox2);
-            this.tabPage3.Controls.Add(this.comboBox12);
-            this.tabPage3.Controls.Add(this.checkBox1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(408, 415);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(100, 453);
-            this.splitter1.TabIndex = 1;
-            this.splitter1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(13, 34);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Finish";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(12, 75);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Reset";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(13, 120);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Exit";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // textBox15
             // 
@@ -868,6 +821,26 @@
             this.label26.Size = new System.Drawing.Size(63, 13);
             this.label26.TabIndex = 71;
             this.label26.Text = "Designation";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.label27);
+            this.tabPage3.Controls.Add(this.textBox29);
+            this.tabPage3.Controls.Add(this.tableLayoutPanel1);
+            this.tabPage3.Controls.Add(this.comboBox11);
+            this.tabPage3.Controls.Add(this.checkBox5);
+            this.tabPage3.Controls.Add(this.checkBox4);
+            this.tabPage3.Controls.Add(this.checkBox3);
+            this.tabPage3.Controls.Add(this.checkBox2);
+            this.tabPage3.Controls.Add(this.comboBox12);
+            this.tabPage3.Controls.Add(this.checkBox1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(408, 415);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // label27
             // 
@@ -1327,6 +1300,24 @@
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(204, 98);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 36;
+            this.button7.Text = "Enter";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(203, 30);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 35;
+            this.button6.Text = "Enter";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // textBox52
             // 
             this.textBox52.Location = new System.Drawing.Point(245, 379);
@@ -1452,23 +1443,40 @@
             this.label48.TabIndex = 20;
             this.label48.Text = "Data Gathered By:";
             // 
-            // button6
+            // splitter1
             // 
-            this.button6.Location = new System.Drawing.Point(203, 30);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 35;
-            this.button6.Text = "Enter";
-            this.button6.UseVisualStyleBackColor = true;
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(100, 453);
+            this.splitter1.TabIndex = 1;
+            this.splitter1.TabStop = false;
             // 
-            // button7
+            // button1
             // 
-            this.button7.Location = new System.Drawing.Point(204, 98);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 36;
-            this.button7.Text = "Enter";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(13, 34);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Finish";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(12, 75);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Reset";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(13, 120);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Exit";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // RegisterPatientTab
             // 

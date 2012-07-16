@@ -47,6 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Objects\Address.cs" />
+    <Compile Include="Objects\Client.cs" />
+    <Compile Include="Objects\Contact.cs" />
+    <Compile Include="Objects\Patient.cs" />
     <Compile Include="Objects\Person.cs" />
     <Compile Include="RegForms\Login.cs">
       <SubType>Form</SubType>

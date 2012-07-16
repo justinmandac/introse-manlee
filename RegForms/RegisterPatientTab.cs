@@ -11,6 +11,8 @@ namespace introseHHC.RegForms
 {
     public partial class RegisterPatientTab : Form
     {
+            
+
         public RegisterPatientTab()
         {
             InitializeComponent();
@@ -20,7 +22,11 @@ namespace introseHHC.RegForms
             this.tabPage3.Text = "Requirements";
             this.tabPage4.Text = "Details";
 
+         
+
         }
+
+
 
 
     }
