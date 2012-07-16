@@ -168,6 +168,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -530,6 +532,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.label49);
             this.tabPage2.Controls.Add(this.textBox1);
             this.tabPage2.Controls.Add(this.checkBox1);
             this.tabPage2.Controls.Add(this.cemailIn);
@@ -978,27 +982,30 @@
             // label28
             // 
             this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.Location = new System.Drawing.Point(3, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(20, 13);
+            this.label28.Size = new System.Drawing.Size(22, 13);
             this.label28.TabIndex = 0;
             this.label28.Text = "PF";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.Location = new System.Drawing.Point(84, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(24, 13);
+            this.label29.Size = new System.Drawing.Size(26, 13);
             this.label29.TabIndex = 1;
             this.label29.Text = "MD";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.Location = new System.Drawing.Point(144, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(29, 13);
+            this.label30.Size = new System.Drawing.Size(32, 13);
             this.label30.TabIndex = 2;
             this.label30.Text = "HCP";
             // 
@@ -1528,19 +1535,36 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(12, 377);
+            this.checkBox1.Location = new System.Drawing.Point(216, 108);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(114, 17);
             this.checkBox1.TabIndex = 104;
             this.checkBox1.Text = "Primary Caregiver?";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(132, 375);
+            this.textBox1.Location = new System.Drawing.Point(236, 130);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(141, 20);
             this.textBox1.TabIndex = 105;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(236, 160);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(107, 13);
+            this.label49.TabIndex = 106;
+            this.label49.Text = "Position/Relationship";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(239, 180);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(138, 20);
+            this.textBox2.TabIndex = 107;
             // 
             // RegisterPatientTab
             // 
@@ -1711,5 +1735,7 @@
         private System.Windows.Forms.CheckedListBox caseMgmtBox;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label49;
     }
 }

@@ -48,6 +48,18 @@ namespace introseHHC.RegForms
             }
         }
 
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                textBox1.Enabled = false;
+            }
+            else
+            {
+                textBox1.Enabled = true;
+            }
+        }
+
 
 
 

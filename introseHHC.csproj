@@ -52,6 +52,12 @@
     <Compile Include="Objects\Contact.cs" />
     <Compile Include="Objects\Patient.cs" />
     <Compile Include="Objects\Person.cs" />
+    <Compile Include="RegForms\CGAForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegForms\CGAForm.Designer.cs">
+      <DependentUpon>CGAForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegForms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,12 +72,21 @@
     <Compile Include="RegForms\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegForms\PersonalHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegForms\PersonalHistory.Designer.cs">
+      <DependentUpon>PersonalHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegForms\RegisterPatientTab.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegForms\RegisterPatientTab.Designer.cs">
       <DependentUpon>RegisterPatientTab.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegForms\CGAForm.resx">
+      <DependentUpon>CGAForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegForms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +101,9 @@
     </Compile>
     <EmbeddedResource Include="RegForms\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegForms\PersonalHistory.resx">
+      <DependentUpon>PersonalHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegForms\RegisterPatientTab.resx">
       <DependentUpon>RegisterPatientTab.cs</DependentUpon>
