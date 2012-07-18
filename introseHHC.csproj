@@ -58,6 +58,12 @@
     <Compile Include="RegForms\CGAForm.Designer.cs">
       <DependentUpon>CGAForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegForms\FamilyHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegForms\FamilyHistory.Designer.cs">
+      <DependentUpon>FamilyHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegForms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </Compile>
     <EmbeddedResource Include="RegForms\CGAForm.resx">
       <DependentUpon>CGAForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegForms\FamilyHistory.resx">
+      <DependentUpon>FamilyHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegForms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
