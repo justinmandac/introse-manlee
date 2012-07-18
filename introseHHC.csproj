@@ -50,8 +50,10 @@
     <Compile Include="Objects\Address.cs" />
     <Compile Include="Objects\Client.cs" />
     <Compile Include="Objects\Contact.cs" />
+    <Compile Include="Objects\FaceSheet.cs" />
     <Compile Include="Objects\Patient.cs" />
     <Compile Include="Objects\Person.cs" />
+    <Compile Include="Objects\Physician.cs" />
     <Compile Include="RegForms\CGAForm.cs">
       <SubType>Form</SubType>
     </Compile>

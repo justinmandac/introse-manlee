@@ -424,10 +424,9 @@
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.descCol,
             this.ansCol});
-            this.dataGridView2.Location = new System.Drawing.Point(9, 28);
+            this.dataGridView2.Location = new System.Drawing.Point(9, 24);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(543, 424);
+            this.dataGridView2.Size = new System.Drawing.Size(543, 428);
             this.dataGridView2.TabIndex = 3;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -491,7 +490,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(7, 7);
+            this.label15.Location = new System.Drawing.Point(5, 7);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(135, 13);
             this.label15.TabIndex = 0;
@@ -499,13 +498,16 @@
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mndescCol,
             this.mnansCol});
-            this.dataGridView3.Location = new System.Drawing.Point(10, 24);
+            this.dataGridView3.Location = new System.Drawing.Point(6, 24);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(542, 428);
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.Size = new System.Drawing.Size(546, 428);
             this.dataGridView3.TabIndex = 1;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
