@@ -1,15 +1,16 @@
+C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\obj\x86\Debug\introseHHC.exe
+C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\obj\x86\Debug\introseHHC.pdb
 C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\bin\Debug\introseHHC.exe
 C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\bin\Debug\introseHHC.pdb
 C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.RegForms.CGAForm.resources
+C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.RegForms.FamilyHistory.resources
+C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.RegForms.Login.resources
 C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.Properties.Resources.resources
+C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.RegForms.MainMenu.resources
+C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.RegForms.PersonalHistory.resources
+C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.RegForms.RegisterPatientTab.resources
 C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.exe
 C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.pdb
-C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.RegForms.Login.resources
-C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.RegForms.RegisterPatientTab.resources
-C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.RegForms.MainMenu.resources
-C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.RegForms.CGAForm.resources
-C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.RegForms.PersonalHistory.resources
-C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\obj\x86\Debug\introseHHC.exe
-C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\obj\x86\Debug\introseHHC.pdb
