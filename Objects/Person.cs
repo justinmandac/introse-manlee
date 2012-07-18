@@ -7,6 +7,7 @@ namespace introseHHC.Objects
 {
     class Person
     {
+        public const byte NAME_LEN = 32;
         private string fname;
         private string sname;
         private string mname;
@@ -36,6 +37,18 @@ namespace introseHHC.Objects
             gender = gen;
             nationality = nat;
             civstat = cstat;
+        }
+
+        public void setName(string f, string m, string s)
+        {
+            //assume max length is 32 characters per field
+                fname = f;
+                mname = m;
+                sname = s;
+        }
+        public void setAddress(Address a)
+        {
+            address = a;
         }
 
 

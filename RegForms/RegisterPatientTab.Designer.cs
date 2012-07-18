@@ -236,6 +236,7 @@
             // pemailIn
             // 
             this.pemailIn.Location = new System.Drawing.Point(82, 398);
+            this.pemailIn.MaxLength = 64;
             this.pemailIn.Name = "pemailIn";
             this.pemailIn.Size = new System.Drawing.Size(208, 20);
             this.pemailIn.TabIndex = 70;
@@ -263,6 +264,7 @@
             // pconNumIn
             // 
             this.pconNumIn.Location = new System.Drawing.Point(173, 356);
+            this.pconNumIn.MaxLength = 32;
             this.pconNumIn.Name = "pconNumIn";
             this.pconNumIn.Size = new System.Drawing.Size(117, 20);
             this.pconNumIn.TabIndex = 67;
@@ -326,6 +328,7 @@
             // pregIn
             // 
             this.pregIn.Location = new System.Drawing.Point(83, 291);
+            this.pregIn.MaxLength = 64;
             this.pregIn.Name = "pregIn";
             this.pregIn.Size = new System.Drawing.Size(163, 20);
             this.pregIn.TabIndex = 60;
@@ -334,14 +337,17 @@
             // pcityIn
             // 
             this.pcityIn.Location = new System.Drawing.Point(82, 317);
+            this.pcityIn.MaxLength = 64;
             this.pcityIn.Name = "pcityIn";
             this.pcityIn.Size = new System.Drawing.Size(121, 20);
             this.pcityIn.TabIndex = 59;
             this.pcityIn.Text = "City";
+            this.pcityIn.TextChanged += new System.EventHandler(this.pcityIn_TextChanged);
             // 
             // paddlineIn
             // 
             this.paddlineIn.Location = new System.Drawing.Point(83, 265);
+            this.paddlineIn.MaxLength = 128;
             this.paddlineIn.Name = "paddlineIn";
             this.paddlineIn.Size = new System.Drawing.Size(163, 20);
             this.paddlineIn.TabIndex = 58;
@@ -350,6 +356,7 @@
             // pstnoIn
             // 
             this.pstnoIn.Location = new System.Drawing.Point(83, 239);
+            this.pstnoIn.MaxLength = 10;
             this.pstnoIn.Name = "pstnoIn";
             this.pstnoIn.Size = new System.Drawing.Size(121, 20);
             this.pstnoIn.TabIndex = 57;
@@ -408,6 +415,7 @@
             // prelIn
             // 
             this.prelIn.Location = new System.Drawing.Point(83, 141);
+            this.prelIn.MaxLength = 64;
             this.prelIn.Name = "prelIn";
             this.prelIn.Size = new System.Drawing.Size(121, 20);
             this.prelIn.TabIndex = 51;
@@ -425,6 +433,7 @@
             // pnatIn
             // 
             this.pnatIn.Location = new System.Drawing.Point(83, 117);
+            this.pnatIn.MaxLength = 64;
             this.pnatIn.Name = "pnatIn";
             this.pnatIn.Size = new System.Drawing.Size(121, 20);
             this.pnatIn.TabIndex = 49;
@@ -442,6 +451,7 @@
             // pyearIn
             // 
             this.pyearIn.Location = new System.Drawing.Point(211, 66);
+            this.pyearIn.MaxLength = 4;
             this.pyearIn.Name = "pyearIn";
             this.pyearIn.Size = new System.Drawing.Size(117, 20);
             this.pyearIn.TabIndex = 47;
@@ -450,6 +460,7 @@
             // pdayIn
             // 
             this.pdayIn.Location = new System.Drawing.Point(163, 67);
+            this.pdayIn.MaxLength = 2;
             this.pdayIn.Name = "pdayIn";
             this.pdayIn.Size = new System.Drawing.Size(40, 20);
             this.pdayIn.TabIndex = 46;
@@ -458,6 +469,7 @@
             // pmonthIn
             // 
             this.pmonthIn.Location = new System.Drawing.Point(83, 66);
+            this.pmonthIn.MaxLength = 2;
             this.pmonthIn.Name = "pmonthIn";
             this.pmonthIn.Size = new System.Drawing.Size(73, 20);
             this.pmonthIn.TabIndex = 45;
@@ -476,6 +488,7 @@
             // pmnameIn
             // 
             this.pmnameIn.Location = new System.Drawing.Point(335, 41);
+            this.pmnameIn.MaxLength = 32;
             this.pmnameIn.Name = "pmnameIn";
             this.pmnameIn.Size = new System.Drawing.Size(83, 20);
             this.pmnameIn.TabIndex = 43;
@@ -484,6 +497,7 @@
             // pfnameIn
             // 
             this.pfnameIn.Location = new System.Drawing.Point(210, 41);
+            this.pfnameIn.MaxLength = 32;
             this.pfnameIn.Name = "pfnameIn";
             this.pfnameIn.Size = new System.Drawing.Size(118, 20);
             this.pfnameIn.TabIndex = 42;
@@ -492,6 +506,7 @@
             // psnameIn
             // 
             this.psnameIn.Location = new System.Drawing.Point(83, 42);
+            this.psnameIn.MaxLength = 32;
             this.psnameIn.Name = "psnameIn";
             this.psnameIn.Size = new System.Drawing.Size(121, 20);
             this.psnameIn.TabIndex = 41;
@@ -1541,16 +1556,17 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 34);
+            this.button1.Location = new System.Drawing.Point(13, 40);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "Finish";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 75);
+            this.button2.Location = new System.Drawing.Point(13, 80);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -1578,6 +1594,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "RegisterPatientTab";
             this.Text = "RegisterPatientTab";
+            this.Load += new System.EventHandler(this.RegisterPatientTab_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
