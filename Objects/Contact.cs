@@ -10,6 +10,12 @@ namespace introseHHC.Objects
         private string label;
         private UInt16 num;
 
+        public Contact(string l, UInt16 n)
+        {
+            label = l;
+            num = n;
+        }
+
         public void setLabel(string l)
         {
             label = l;
@@ -18,6 +24,15 @@ namespace introseHHC.Objects
         public void setNum(UInt16 n)
         {
             num = n;
+        }
+
+        public string getLabel()
+        {
+            return label;
+        }
+        public UInt16 getNum()
+        {
+            return num;
         }
     }
 }

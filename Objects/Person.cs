@@ -8,7 +8,7 @@ namespace introseHHC.Objects
 {
     public class Person
     {
-        public const byte NAME_LEN = 32;
+        protected Name name = new Name();
         protected string desig;
         protected string fname;
         protected string sname;
@@ -23,14 +23,15 @@ namespace introseHHC.Objects
         protected UInt16 age;
         protected Address address;
         protected LinkedList<Contact> contactList;
-
         public Person()
         {
             fname = sname = mname = "";
             gender = civstat = "";
             nationality = educattain = email = "";
             age = 0;
-            address = null;
+            address = new Address();
+            contactList = new LinkedList<Contact>();
+          
         }
         public Person(string fn,string sn, string mn, string gen,string nat, string cstat)
         {
@@ -44,11 +45,11 @@ namespace introseHHC.Objects
       //Mutator methods
         public void setName(string d,string f, string m, string s)
         {
-                desig = d;
-            //assume max length is 32 characters per field
-                fname = f;
-                mname = m;
-                sname = s;
+            name.setDesignation(d);
+            name.setFirstName(f);
+            name.setMiddleName(m);
+            name.setLastName(s);
+
         }
         public void setBday(DateTime b)
         {
@@ -95,15 +96,46 @@ namespace introseHHC.Objects
             address.setRegion(r);
         }
     //Getter methods
-        public string getName();
-        public string getBDay();
-        public string getGender();
-        public string getNationality();
-        public string getReligion();
-        public string getCivilStatus();
-        public string getEducAttainment();
-        public string getEmail();
-        public LinkedList<Contact> getContactNumbers();
-        public Address getAddress();
+        public Name getName()
+            {
+                return name;
+            }
+        public DateTime getBDay()
+            {
+                return bday;
+            }
+        public LinkedList<Contact> getContactNumbers()
+            {
+                return contactList;
+            }
+        public Address getAddress()
+            {
+                return address;
+            }
+        public string getGender()
+            {
+                return gender;
+            }
+        public string getNationality()
+            {
+                return nationality;
+            }
+        public string getReligion()
+            {
+                return religion;
+            }
+        public string getCivilStatus()
+            {
+                return civstat;
+            }
+        public string getEducAttainment()
+            {
+                return educattain;
+            }
+        public string getEmail()
+            {
+                return email;
+            }
+
     }
 }

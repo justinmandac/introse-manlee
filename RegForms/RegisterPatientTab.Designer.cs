@@ -163,7 +163,7 @@
             this.textBox58 = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.button1 = new System.Windows.Forms.Button();
+            this.finishButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.acceptButton = new System.Windows.Forms.Button();
@@ -1543,15 +1543,15 @@
             this.splitter1.TabIndex = 1;
             this.splitter1.TabStop = false;
             // 
-            // button1
+            // finishButton
             // 
-            this.button1.Location = new System.Drawing.Point(13, 80);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Finish";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.finishButton.Location = new System.Drawing.Point(13, 80);
+            this.finishButton.Name = "finishButton";
+            this.finishButton.Size = new System.Drawing.Size(75, 23);
+            this.finishButton.TabIndex = 2;
+            this.finishButton.Text = "Finish";
+            this.finishButton.UseVisualStyleBackColor = true;
+            this.finishButton.Click += new System.EventHandler(this.finishButton_Click);
             // 
             // button2
             // 
@@ -1588,9 +1588,10 @@
             this.Controls.Add(this.acceptButton);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.finishButton);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RegisterPatientTab";
             this.Text = "RegisterPatientTab";
             this.tabControl1.ResumeLayout(false);
@@ -1645,7 +1646,7 @@
         private System.Windows.Forms.ComboBox pdesigCoB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button finishButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox cemailIn;

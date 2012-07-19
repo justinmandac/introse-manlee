@@ -58,19 +58,36 @@ namespace introseHHC.RegForms
 
         }
 
-        //save inputs to respective classes
-        private void button1_Click(object sender, EventArgs e)
+        private void displayStuff(Patient p)
         {
-            Console.Write("Finish Button Clicked\n");
+
+            Console.WriteLine("Name: "+patient.getName().getFullName());
+            Console.WriteLine("Birthdate: "+patient.getBDay().ToShortDateString());
+            Console.WriteLine("Gender: "+patient.getGender());
+            Console.WriteLine("Nationality: "+patient.getNationality());
+            Console.WriteLine("Religion: "+patient.getReligion());
+            Console.WriteLine("Civil Status: "+patient.getCivilStatus());
+            Console.WriteLine("Educational Attainment: "+patient.getEducAttainment());
+
+            Console.WriteLine("Address: "+patient.getAddress().getFullAddress());
+
+        }
+
+        //save inputs to respective classes
+        private void finishButton_Click(object sender, EventArgs e)
+        {
+          
             if (tabControl1.SelectedIndex == PATIENT_TAB)
-            {
+            {   
                 //Patient Tab
                 //get all the values in the fields & perform error checking
+                //commands below execute only when the Patient Information Tab is selected.
 
-                    desig = pdesigCoB.SelectedText;
+                    desig = pdesigCoB.Text;
                     fname = pfnameIn.Text;
                     sname = psnameIn.Text;
                     mname = pmnameIn.Text;
+
                 //replace error checking with regular expressions.
                     if (fname.Equals("First Name"))
                     {
@@ -103,37 +120,32 @@ namespace introseHHC.RegForms
                     birthdate = pbdayPick.Value;
                                
                 //following fields must not be blank
-                gender = pgenCoB.SelectedText;
-                nationality = pnatIn.Text;
-                religion = prelIn.Text;
-                civstat = pcivStatCoB.SelectedText;
-                educattain = pedattCoB.SelectedText;
+                    gender = pgenCoB.Text;
+                    nationality = pnatIn.Text;
+                    religion = prelIn.Text;
+                    civstat = pcivStatCoB.Text;
+                    educattain = pedattCoB.Text;
                 //fields for address. must not be blank!
-                addline = paddlineIn.Text;
-                city = pcityIn.Text;
-                region = pregIn.Text;
+                    addline = paddlineIn.Text;
+                    city = pcityIn.Text;
+                    region = pregIn.Text;
 
-                try
-                {
-                    stnumber = UInt16.Parse(pstnoIn.Text);
-                }
-                catch (Exception err)
-                {
-                    Console.WriteLine("Street #: "+err.Message);
-                }
+                    try
+                    {
+                        stnumber = UInt16.Parse(pstnoIn.Text);
+                    }
+                    catch (FormatException err)
+                    {
+                        Console.WriteLine("Street #: " + err.Message);
+                    }
+                    catch (OverflowException of)
+                    {
+                        Console.WriteLine("Street #: "+of.Message);
+                    }
 
-                //get contact number details
-                contactlabel = pcontypeCoB.SelectedText;
-                try
-                {
-                    contactnumber = UInt16.Parse(pconNumIn.Text);
-                }
-                catch(Exception err)
-                {
-                    Console.WriteLine("Contact Number: "+err.Message);
-                   
-                }
+
                 //get email
+                //needs regex based error checking
                 email = pemailIn.Text;
 
                 //add fields to Patient Object
@@ -145,6 +157,14 @@ namespace introseHHC.RegForms
                 patient.setCivilStatus(civstat);
                 patient.setEducAttainment(educattain);
                 patient.setEmail(email);
+                patient.setAddress(stnumber,addline,city,region);
+
+                if (patient.getContactNumbers().Count == 0)
+                {
+                    Console.WriteLine("No Contact Numbers entered!");
+                }
+
+                displayStuff(patient);
         
             }
             else if (tabControl1.SelectedIndex == CLIENT_TAB)
@@ -160,10 +180,23 @@ namespace introseHHC.RegForms
                 //Details tab
             }
         }
-
+        //runs when the Add button for Contact information is clicked.
         private void pconAddButton_Click(object sender, EventArgs e)
         {
 
+            contactlabel = pcontypeCoB.Text;
+            try
+            {
+                contactnumber = UInt16.Parse(pconNumIn.Text);
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine("Contact Number: " + err.Message);
+
+            }
+            patient.addContact(new Contact(contactlabel,contactnumber));
+            pconNumIn.Text = "";
+            
         }
 
         private void caseMgmtCB_CheckedChanged(object sender, EventArgs e)
