@@ -5,7 +5,11 @@ using System.Text;
 
 namespace introseHHC.Objects
 {
-    class Patient: Person
+    public class Patient: Person
     {
+        public Patient()
+        {
+
+        }
     }
 }

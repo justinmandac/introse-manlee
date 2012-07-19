@@ -5,10 +5,10 @@ using System.Text;
 
 namespace introseHHC.Objects
 {
-    class Address
+    public class Address
     {
         //address fields
-        private string number;
+        private UInt16 number;
         private string addline1;
         private string city;
         private string region;
@@ -18,7 +18,7 @@ namespace introseHHC.Objects
 
         }
 
-        public void setStreetNo(int n)
+        public void setStreetNo(UInt16 n)
         {
             if (n > 0)
             {

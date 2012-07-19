@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 namespace introseHHC.Objects
 {
-    class Person
+    public class Person
     {
         public const byte NAME_LEN = 32;
+        private string desig;
         private string fname;
         private string sname;
         private string mname;
@@ -39,19 +41,28 @@ namespace introseHHC.Objects
             civstat = cstat;
         }
 
-        public void setName(string f, string m, string s)
+       
+
+        public void setName(string d,string f, string m, string s)
         {
+            desig = d;
             //assume max length is 32 characters per field
                 fname = f;
                 mname = m;
                 sname = s;
         }
-        public void setAddress(Address a)
+
+        public void setBday(string m, string d, string y)
         {
-            address = a;
+            Int32 dm, dd, dy;
+            //convert to Integers & do error checking
+            dm = Int32.Parse(m);
+            dd = Int32.Parse(d);
+            dy = Int32.Parse(y);
+
+            bday = new DateTime(dy,dm,dd);
+
         }
-
-
        
         
     }
