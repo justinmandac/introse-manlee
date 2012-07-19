@@ -30,9 +30,10 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pbdayPick = new System.Windows.Forms.DateTimePicker();
             this.pemailIn = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.conAddButton = new System.Windows.Forms.Button();
+            this.pconAddButton = new System.Windows.Forms.Button();
             this.pconNumIn = new System.Windows.Forms.TextBox();
             this.pcontypeCoB = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -53,9 +54,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pnatIn = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pyearIn = new System.Windows.Forms.TextBox();
-            this.pdayIn = new System.Windows.Forms.TextBox();
-            this.pmonthIn = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pmnameIn = new System.Windows.Forms.TextBox();
             this.pfnameIn = new System.Windows.Forms.TextBox();
@@ -64,10 +62,11 @@
             this.pdesigCoB = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cbdayPick = new System.Windows.Forms.DateTimePicker();
+            this.posIn = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.primaryIn = new System.Windows.Forms.TextBox();
+            this.primaryCB = new System.Windows.Forms.CheckBox();
             this.cemailIn = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cconAddButton = new System.Windows.Forms.Button();
@@ -91,9 +90,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.cnatIn = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.cyearIn = new System.Windows.Forms.TextBox();
-            this.cdayIn = new System.Windows.Forms.TextBox();
-            this.cmonthIn = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.cmnameIn = new System.Windows.Forms.TextBox();
             this.cfnameIn = new System.Windows.Forms.TextBox();
@@ -193,9 +189,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.pbdayPick);
             this.tabPage1.Controls.Add(this.pemailIn);
             this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.conAddButton);
+            this.tabPage1.Controls.Add(this.pconAddButton);
             this.tabPage1.Controls.Add(this.pconNumIn);
             this.tabPage1.Controls.Add(this.pcontypeCoB);
             this.tabPage1.Controls.Add(this.label12);
@@ -216,9 +213,6 @@
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.pnatIn);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.pyearIn);
-            this.tabPage1.Controls.Add(this.pdayIn);
-            this.tabPage1.Controls.Add(this.pmonthIn);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.pmnameIn);
             this.tabPage1.Controls.Add(this.pfnameIn);
@@ -234,9 +228,16 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pbdayPick
+            // 
+            this.pbdayPick.Location = new System.Drawing.Point(82, 86);
+            this.pbdayPick.Name = "pbdayPick";
+            this.pbdayPick.Size = new System.Drawing.Size(246, 20);
+            this.pbdayPick.TabIndex = 71;
+            // 
             // pemailIn
             // 
-            this.pemailIn.Location = new System.Drawing.Point(82, 398);
+            this.pemailIn.Location = new System.Drawing.Point(82, 419);
             this.pemailIn.MaxLength = 64;
             this.pemailIn.Name = "pemailIn";
             this.pemailIn.Size = new System.Drawing.Size(208, 20);
@@ -246,25 +247,26 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label13.Location = new System.Drawing.Point(9, 402);
+            this.label13.Location = new System.Drawing.Point(9, 423);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(36, 13);
             this.label13.TabIndex = 69;
             this.label13.Text = "E-Mail";
             // 
-            // conAddButton
+            // pconAddButton
             // 
-            this.conAddButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.conAddButton.Location = new System.Drawing.Point(308, 355);
-            this.conAddButton.Name = "conAddButton";
-            this.conAddButton.Size = new System.Drawing.Size(66, 20);
-            this.conAddButton.TabIndex = 68;
-            this.conAddButton.Text = "Add";
-            this.conAddButton.UseVisualStyleBackColor = true;
+            this.pconAddButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pconAddButton.Location = new System.Drawing.Point(308, 376);
+            this.pconAddButton.Name = "pconAddButton";
+            this.pconAddButton.Size = new System.Drawing.Size(66, 20);
+            this.pconAddButton.TabIndex = 68;
+            this.pconAddButton.Text = "Add";
+            this.pconAddButton.UseVisualStyleBackColor = true;
+            this.pconAddButton.Click += new System.EventHandler(this.pconAddButton_Click);
             // 
             // pconNumIn
             // 
-            this.pconNumIn.Location = new System.Drawing.Point(173, 356);
+            this.pconNumIn.Location = new System.Drawing.Point(173, 377);
             this.pconNumIn.MaxLength = 32;
             this.pconNumIn.Name = "pconNumIn";
             this.pconNumIn.Size = new System.Drawing.Size(117, 20);
@@ -273,7 +275,12 @@
             // pcontypeCoB
             // 
             this.pcontypeCoB.FormattingEnabled = true;
-            this.pcontypeCoB.Location = new System.Drawing.Point(82, 356);
+            this.pcontypeCoB.Items.AddRange(new object[] {
+            "Fax",
+            "Home",
+            "Work",
+            "Mobile"});
+            this.pcontypeCoB.Location = new System.Drawing.Point(82, 377);
             this.pcontypeCoB.Name = "pcontypeCoB";
             this.pcontypeCoB.Size = new System.Drawing.Size(84, 21);
             this.pcontypeCoB.TabIndex = 66;
@@ -282,7 +289,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label12.Location = new System.Drawing.Point(6, 372);
+            this.label12.Location = new System.Drawing.Point(6, 393);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(55, 13);
             this.label12.TabIndex = 65;
@@ -292,7 +299,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(6, 356);
+            this.label11.Location = new System.Drawing.Point(6, 377);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 13);
             this.label11.TabIndex = 64;
@@ -300,8 +307,15 @@
             // 
             // pedattCoB
             // 
+            this.pedattCoB.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.pedattCoB.FormattingEnabled = true;
-            this.pedattCoB.Location = new System.Drawing.Point(83, 195);
+            this.pedattCoB.Items.AddRange(new object[] {
+            "Primary",
+            "Secondary",
+            "Tertiary",
+            "Intermediate",
+            "None"});
+            this.pedattCoB.Location = new System.Drawing.Point(83, 216);
             this.pedattCoB.Name = "pedattCoB";
             this.pedattCoB.Size = new System.Drawing.Size(121, 21);
             this.pedattCoB.TabIndex = 63;
@@ -310,7 +324,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(6, 213);
+            this.label10.Location = new System.Drawing.Point(6, 234);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(57, 13);
             this.label10.TabIndex = 62;
@@ -320,7 +334,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(6, 195);
+            this.label9.Location = new System.Drawing.Point(6, 216);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 13);
             this.label9.TabIndex = 61;
@@ -328,7 +342,7 @@
             // 
             // pregIn
             // 
-            this.pregIn.Location = new System.Drawing.Point(83, 291);
+            this.pregIn.Location = new System.Drawing.Point(83, 312);
             this.pregIn.MaxLength = 64;
             this.pregIn.Name = "pregIn";
             this.pregIn.Size = new System.Drawing.Size(163, 20);
@@ -337,17 +351,16 @@
             // 
             // pcityIn
             // 
-            this.pcityIn.Location = new System.Drawing.Point(82, 317);
+            this.pcityIn.Location = new System.Drawing.Point(82, 338);
             this.pcityIn.MaxLength = 64;
             this.pcityIn.Name = "pcityIn";
             this.pcityIn.Size = new System.Drawing.Size(121, 20);
             this.pcityIn.TabIndex = 59;
             this.pcityIn.Text = "City";
-            this.pcityIn.TextChanged += new System.EventHandler(this.pcityIn_TextChanged);
             // 
             // paddlineIn
             // 
-            this.paddlineIn.Location = new System.Drawing.Point(83, 265);
+            this.paddlineIn.Location = new System.Drawing.Point(83, 286);
             this.paddlineIn.MaxLength = 128;
             this.paddlineIn.Name = "paddlineIn";
             this.paddlineIn.Size = new System.Drawing.Size(163, 20);
@@ -356,7 +369,7 @@
             // 
             // pstnoIn
             // 
-            this.pstnoIn.Location = new System.Drawing.Point(83, 239);
+            this.pstnoIn.Location = new System.Drawing.Point(83, 260);
             this.pstnoIn.MaxLength = 10;
             this.pstnoIn.Name = "pstnoIn";
             this.pstnoIn.Size = new System.Drawing.Size(121, 20);
@@ -367,7 +380,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(9, 244);
+            this.label8.Location = new System.Drawing.Point(9, 265);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 13);
             this.label8.TabIndex = 56;
@@ -376,7 +389,12 @@
             // pcivStatCoB
             // 
             this.pcivStatCoB.FormattingEnabled = true;
-            this.pcivStatCoB.Location = new System.Drawing.Point(83, 166);
+            this.pcivStatCoB.Items.AddRange(new object[] {
+            "Single",
+            "Married",
+            "Divorced",
+            "Widowed"});
+            this.pcivStatCoB.Location = new System.Drawing.Point(83, 187);
             this.pcivStatCoB.Name = "pcivStatCoB";
             this.pcivStatCoB.Size = new System.Drawing.Size(121, 21);
             this.pcivStatCoB.TabIndex = 55;
@@ -385,7 +403,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(6, 170);
+            this.label7.Location = new System.Drawing.Point(6, 191);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 13);
             this.label7.TabIndex = 54;
@@ -393,12 +411,17 @@
             // 
             // pgenCoB
             // 
+            this.pgenCoB.AutoCompleteCustomSource.AddRange(new string[] {
+            "M",
+            "F",
+            "O"});
+            this.pgenCoB.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.pgenCoB.FormattingEnabled = true;
             this.pgenCoB.Items.AddRange(new object[] {
             "M",
             "F",
             "O"});
-            this.pgenCoB.Location = new System.Drawing.Point(83, 91);
+            this.pgenCoB.Location = new System.Drawing.Point(83, 112);
             this.pgenCoB.Name = "pgenCoB";
             this.pgenCoB.Size = new System.Drawing.Size(121, 21);
             this.pgenCoB.TabIndex = 53;
@@ -407,7 +430,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(6, 99);
+            this.label6.Location = new System.Drawing.Point(6, 120);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 13);
             this.label6.TabIndex = 52;
@@ -415,7 +438,7 @@
             // 
             // prelIn
             // 
-            this.prelIn.Location = new System.Drawing.Point(83, 141);
+            this.prelIn.Location = new System.Drawing.Point(83, 162);
             this.prelIn.MaxLength = 64;
             this.prelIn.Name = "prelIn";
             this.prelIn.Size = new System.Drawing.Size(121, 20);
@@ -425,7 +448,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(6, 146);
+            this.label5.Location = new System.Drawing.Point(6, 167);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 50;
@@ -433,7 +456,7 @@
             // 
             // pnatIn
             // 
-            this.pnatIn.Location = new System.Drawing.Point(83, 117);
+            this.pnatIn.Location = new System.Drawing.Point(83, 138);
             this.pnatIn.MaxLength = 64;
             this.pnatIn.Name = "pnatIn";
             this.pnatIn.Size = new System.Drawing.Size(121, 20);
@@ -443,44 +466,17 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(6, 123);
+            this.label4.Location = new System.Drawing.Point(6, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 48;
             this.label4.Text = "Nationality";
             // 
-            // pyearIn
-            // 
-            this.pyearIn.Location = new System.Drawing.Point(211, 66);
-            this.pyearIn.MaxLength = 4;
-            this.pyearIn.Name = "pyearIn";
-            this.pyearIn.Size = new System.Drawing.Size(117, 20);
-            this.pyearIn.TabIndex = 47;
-            this.pyearIn.Text = "yyyy";
-            // 
-            // pdayIn
-            // 
-            this.pdayIn.Location = new System.Drawing.Point(163, 67);
-            this.pdayIn.MaxLength = 2;
-            this.pdayIn.Name = "pdayIn";
-            this.pdayIn.Size = new System.Drawing.Size(40, 20);
-            this.pdayIn.TabIndex = 46;
-            this.pdayIn.Text = "dd";
-            // 
-            // pmonthIn
-            // 
-            this.pmonthIn.Location = new System.Drawing.Point(83, 66);
-            this.pmonthIn.MaxLength = 2;
-            this.pmonthIn.Name = "pmonthIn";
-            this.pmonthIn.Size = new System.Drawing.Size(73, 20);
-            this.pmonthIn.TabIndex = 45;
-            this.pmonthIn.Text = "mm";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(6, 72);
+            this.label3.Location = new System.Drawing.Point(6, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 44;
@@ -488,7 +484,7 @@
             // 
             // pmnameIn
             // 
-            this.pmnameIn.Location = new System.Drawing.Point(335, 41);
+            this.pmnameIn.Location = new System.Drawing.Point(335, 61);
             this.pmnameIn.MaxLength = 32;
             this.pmnameIn.Name = "pmnameIn";
             this.pmnameIn.Size = new System.Drawing.Size(83, 20);
@@ -497,7 +493,7 @@
             // 
             // pfnameIn
             // 
-            this.pfnameIn.Location = new System.Drawing.Point(210, 41);
+            this.pfnameIn.Location = new System.Drawing.Point(210, 61);
             this.pfnameIn.MaxLength = 32;
             this.pfnameIn.Name = "pfnameIn";
             this.pfnameIn.Size = new System.Drawing.Size(118, 20);
@@ -506,7 +502,7 @@
             // 
             // psnameIn
             // 
-            this.psnameIn.Location = new System.Drawing.Point(83, 42);
+            this.psnameIn.Location = new System.Drawing.Point(83, 62);
             this.psnameIn.MaxLength = 32;
             this.psnameIn.Name = "psnameIn";
             this.psnameIn.Size = new System.Drawing.Size(121, 20);
@@ -517,7 +513,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(6, 46);
+            this.label2.Location = new System.Drawing.Point(6, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 40;
@@ -531,7 +527,7 @@
             "Mr.",
             "Ms.",
             "Mrs."});
-            this.pdesigCoB.Location = new System.Drawing.Point(83, 16);
+            this.pdesigCoB.Location = new System.Drawing.Point(83, 36);
             this.pdesigCoB.Name = "pdesigCoB";
             this.pdesigCoB.Size = new System.Drawing.Size(121, 21);
             this.pdesigCoB.TabIndex = 39;
@@ -540,7 +536,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(6, 21);
+            this.label1.Location = new System.Drawing.Point(6, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 38;
@@ -548,10 +544,11 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.cbdayPick);
+            this.tabPage2.Controls.Add(this.posIn);
             this.tabPage2.Controls.Add(this.label49);
-            this.tabPage2.Controls.Add(this.textBox1);
-            this.tabPage2.Controls.Add(this.checkBox1);
+            this.tabPage2.Controls.Add(this.primaryIn);
+            this.tabPage2.Controls.Add(this.primaryCB);
             this.tabPage2.Controls.Add(this.cemailIn);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.cconAddButton);
@@ -575,9 +572,6 @@
             this.tabPage2.Controls.Add(this.label22);
             this.tabPage2.Controls.Add(this.cnatIn);
             this.tabPage2.Controls.Add(this.label23);
-            this.tabPage2.Controls.Add(this.cyearIn);
-            this.tabPage2.Controls.Add(this.cdayIn);
-            this.tabPage2.Controls.Add(this.cmonthIn);
             this.tabPage2.Controls.Add(this.label24);
             this.tabPage2.Controls.Add(this.cmnameIn);
             this.tabPage2.Controls.Add(this.cfnameIn);
@@ -593,43 +587,50 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // cbdayPick
             // 
-            this.textBox2.Location = new System.Drawing.Point(239, 180);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(138, 20);
-            this.textBox2.TabIndex = 107;
+            this.cbdayPick.Location = new System.Drawing.Point(82, 86);
+            this.cbdayPick.Name = "cbdayPick";
+            this.cbdayPick.Size = new System.Drawing.Size(246, 20);
+            this.cbdayPick.TabIndex = 108;
+            // 
+            // posIn
+            // 
+            this.posIn.Location = new System.Drawing.Point(239, 201);
+            this.posIn.Name = "posIn";
+            this.posIn.Size = new System.Drawing.Size(179, 20);
+            this.posIn.TabIndex = 107;
             // 
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(236, 160);
+            this.label49.Location = new System.Drawing.Point(236, 181);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(107, 13);
             this.label49.TabIndex = 106;
             this.label49.Text = "Position/Relationship";
             // 
-            // textBox1
+            // primaryIn
             // 
-            this.textBox1.Location = new System.Drawing.Point(236, 130);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 20);
-            this.textBox1.TabIndex = 105;
+            this.primaryIn.Location = new System.Drawing.Point(236, 151);
+            this.primaryIn.Name = "primaryIn";
+            this.primaryIn.Size = new System.Drawing.Size(182, 20);
+            this.primaryIn.TabIndex = 105;
             // 
-            // checkBox1
+            // primaryCB
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(216, 108);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(114, 17);
-            this.checkBox1.TabIndex = 104;
-            this.checkBox1.Text = "Primary Caregiver?";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.primaryCB.AutoSize = true;
+            this.primaryCB.Location = new System.Drawing.Point(216, 129);
+            this.primaryCB.Name = "primaryCB";
+            this.primaryCB.Size = new System.Drawing.Size(114, 17);
+            this.primaryCB.TabIndex = 104;
+            this.primaryCB.Text = "Primary Caregiver?";
+            this.primaryCB.UseVisualStyleBackColor = true;
+            this.primaryCB.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // cemailIn
             // 
-            this.cemailIn.Location = new System.Drawing.Point(82, 398);
+            this.cemailIn.Location = new System.Drawing.Point(82, 419);
             this.cemailIn.Name = "cemailIn";
             this.cemailIn.Size = new System.Drawing.Size(208, 20);
             this.cemailIn.TabIndex = 100;
@@ -637,7 +638,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(9, 402);
+            this.label14.Location = new System.Drawing.Point(9, 423);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(36, 13);
             this.label14.TabIndex = 102;
@@ -645,7 +646,7 @@
             // 
             // cconAddButton
             // 
-            this.cconAddButton.Location = new System.Drawing.Point(308, 355);
+            this.cconAddButton.Location = new System.Drawing.Point(308, 376);
             this.cconAddButton.Name = "cconAddButton";
             this.cconAddButton.Size = new System.Drawing.Size(66, 20);
             this.cconAddButton.TabIndex = 101;
@@ -654,7 +655,7 @@
             // 
             // cconIn
             // 
-            this.cconIn.Location = new System.Drawing.Point(173, 356);
+            this.cconIn.Location = new System.Drawing.Point(173, 377);
             this.cconIn.Name = "cconIn";
             this.cconIn.Size = new System.Drawing.Size(117, 20);
             this.cconIn.TabIndex = 61;
@@ -662,7 +663,12 @@
             // cconLabCoB
             // 
             this.cconLabCoB.FormattingEnabled = true;
-            this.cconLabCoB.Location = new System.Drawing.Point(82, 356);
+            this.cconLabCoB.Items.AddRange(new object[] {
+            "Fax",
+            "Home",
+            "Work",
+            "Mobile"});
+            this.cconLabCoB.Location = new System.Drawing.Point(82, 377);
             this.cconLabCoB.Name = "cconLabCoB";
             this.cconLabCoB.Size = new System.Drawing.Size(84, 21);
             this.cconLabCoB.TabIndex = 99;
@@ -670,7 +676,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 372);
+            this.label15.Location = new System.Drawing.Point(6, 393);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(55, 13);
             this.label15.TabIndex = 98;
@@ -679,7 +685,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 356);
+            this.label16.Location = new System.Drawing.Point(6, 377);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(44, 13);
             this.label16.TabIndex = 97;
@@ -688,7 +694,13 @@
             // cedattCoB
             // 
             this.cedattCoB.FormattingEnabled = true;
-            this.cedattCoB.Location = new System.Drawing.Point(83, 195);
+            this.cedattCoB.Items.AddRange(new object[] {
+            "Primary",
+            "Secondary",
+            "Tertiary",
+            "Intermediate",
+            "None"});
+            this.cedattCoB.Location = new System.Drawing.Point(83, 216);
             this.cedattCoB.Name = "cedattCoB";
             this.cedattCoB.Size = new System.Drawing.Size(121, 21);
             this.cedattCoB.TabIndex = 96;
@@ -696,7 +708,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 213);
+            this.label17.Location = new System.Drawing.Point(6, 234);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(57, 13);
             this.label17.TabIndex = 95;
@@ -705,7 +717,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 195);
+            this.label18.Location = new System.Drawing.Point(6, 216);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(63, 13);
             this.label18.TabIndex = 94;
@@ -713,7 +725,7 @@
             // 
             // cregIn
             // 
-            this.cregIn.Location = new System.Drawing.Point(83, 291);
+            this.cregIn.Location = new System.Drawing.Point(83, 312);
             this.cregIn.Name = "cregIn";
             this.cregIn.Size = new System.Drawing.Size(163, 20);
             this.cregIn.TabIndex = 93;
@@ -721,7 +733,7 @@
             // 
             // ccityIn
             // 
-            this.ccityIn.Location = new System.Drawing.Point(82, 317);
+            this.ccityIn.Location = new System.Drawing.Point(82, 338);
             this.ccityIn.Name = "ccityIn";
             this.ccityIn.Size = new System.Drawing.Size(121, 20);
             this.ccityIn.TabIndex = 92;
@@ -729,7 +741,7 @@
             // 
             // caddIn
             // 
-            this.caddIn.Location = new System.Drawing.Point(83, 265);
+            this.caddIn.Location = new System.Drawing.Point(83, 286);
             this.caddIn.Name = "caddIn";
             this.caddIn.Size = new System.Drawing.Size(163, 20);
             this.caddIn.TabIndex = 91;
@@ -737,7 +749,7 @@
             // 
             // cstNoIn
             // 
-            this.cstNoIn.Location = new System.Drawing.Point(83, 239);
+            this.cstNoIn.Location = new System.Drawing.Point(83, 260);
             this.cstNoIn.Name = "cstNoIn";
             this.cstNoIn.Size = new System.Drawing.Size(121, 20);
             this.cstNoIn.TabIndex = 90;
@@ -746,7 +758,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(9, 244);
+            this.label19.Location = new System.Drawing.Point(9, 265);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(45, 13);
             this.label19.TabIndex = 89;
@@ -760,7 +772,7 @@
             "Married",
             "Divorced",
             "Widowed"});
-            this.ccivstatCoB.Location = new System.Drawing.Point(83, 166);
+            this.ccivstatCoB.Location = new System.Drawing.Point(83, 187);
             this.ccivstatCoB.Name = "ccivstatCoB";
             this.ccivstatCoB.Size = new System.Drawing.Size(121, 21);
             this.ccivstatCoB.TabIndex = 88;
@@ -768,7 +780,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 170);
+            this.label20.Location = new System.Drawing.Point(6, 191);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(59, 13);
             this.label20.TabIndex = 87;
@@ -781,7 +793,7 @@
             "M",
             "F",
             "O"});
-            this.cgenCoB.Location = new System.Drawing.Point(83, 91);
+            this.cgenCoB.Location = new System.Drawing.Point(83, 112);
             this.cgenCoB.Name = "cgenCoB";
             this.cgenCoB.Size = new System.Drawing.Size(121, 21);
             this.cgenCoB.TabIndex = 86;
@@ -789,7 +801,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 99);
+            this.label21.Location = new System.Drawing.Point(6, 120);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(42, 13);
             this.label21.TabIndex = 85;
@@ -797,7 +809,7 @@
             // 
             // crelIn
             // 
-            this.crelIn.Location = new System.Drawing.Point(83, 141);
+            this.crelIn.Location = new System.Drawing.Point(83, 162);
             this.crelIn.Name = "crelIn";
             this.crelIn.Size = new System.Drawing.Size(121, 20);
             this.crelIn.TabIndex = 84;
@@ -805,7 +817,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 146);
+            this.label22.Location = new System.Drawing.Point(6, 167);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(45, 13);
             this.label22.TabIndex = 83;
@@ -813,7 +825,7 @@
             // 
             // cnatIn
             // 
-            this.cnatIn.Location = new System.Drawing.Point(83, 117);
+            this.cnatIn.Location = new System.Drawing.Point(83, 138);
             this.cnatIn.Name = "cnatIn";
             this.cnatIn.Size = new System.Drawing.Size(121, 20);
             this.cnatIn.TabIndex = 82;
@@ -821,40 +833,16 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 123);
+            this.label23.Location = new System.Drawing.Point(6, 144);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(56, 13);
             this.label23.TabIndex = 81;
             this.label23.Text = "Nationality";
             // 
-            // cyearIn
-            // 
-            this.cyearIn.Location = new System.Drawing.Point(211, 66);
-            this.cyearIn.Name = "cyearIn";
-            this.cyearIn.Size = new System.Drawing.Size(117, 20);
-            this.cyearIn.TabIndex = 80;
-            this.cyearIn.Text = "yyyy";
-            // 
-            // cdayIn
-            // 
-            this.cdayIn.Location = new System.Drawing.Point(163, 67);
-            this.cdayIn.Name = "cdayIn";
-            this.cdayIn.Size = new System.Drawing.Size(40, 20);
-            this.cdayIn.TabIndex = 79;
-            this.cdayIn.Text = "dd";
-            // 
-            // cmonthIn
-            // 
-            this.cmonthIn.Location = new System.Drawing.Point(83, 66);
-            this.cmonthIn.Name = "cmonthIn";
-            this.cmonthIn.Size = new System.Drawing.Size(73, 20);
-            this.cmonthIn.TabIndex = 78;
-            this.cmonthIn.Text = "mm";
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 72);
+            this.label24.Location = new System.Drawing.Point(6, 93);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(49, 13);
             this.label24.TabIndex = 77;
@@ -862,7 +850,7 @@
             // 
             // cmnameIn
             // 
-            this.cmnameIn.Location = new System.Drawing.Point(335, 41);
+            this.cmnameIn.Location = new System.Drawing.Point(335, 61);
             this.cmnameIn.Name = "cmnameIn";
             this.cmnameIn.Size = new System.Drawing.Size(83, 20);
             this.cmnameIn.TabIndex = 76;
@@ -870,7 +858,7 @@
             // 
             // cfnameIn
             // 
-            this.cfnameIn.Location = new System.Drawing.Point(210, 41);
+            this.cfnameIn.Location = new System.Drawing.Point(210, 61);
             this.cfnameIn.Name = "cfnameIn";
             this.cfnameIn.Size = new System.Drawing.Size(118, 20);
             this.cfnameIn.TabIndex = 75;
@@ -878,7 +866,7 @@
             // 
             // csnameIn
             // 
-            this.csnameIn.Location = new System.Drawing.Point(83, 42);
+            this.csnameIn.Location = new System.Drawing.Point(83, 62);
             this.csnameIn.Name = "csnameIn";
             this.csnameIn.Size = new System.Drawing.Size(121, 20);
             this.csnameIn.TabIndex = 74;
@@ -887,7 +875,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(6, 46);
+            this.label25.Location = new System.Drawing.Point(6, 66);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(35, 13);
             this.label25.TabIndex = 73;
@@ -901,7 +889,7 @@
             "Mr.",
             "Ms.",
             "Mrs."});
-            this.cdesigCoB.Location = new System.Drawing.Point(83, 16);
+            this.cdesigCoB.Location = new System.Drawing.Point(83, 36);
             this.cdesigCoB.Name = "cdesigCoB";
             this.cdesigCoB.Size = new System.Drawing.Size(121, 21);
             this.cdesigCoB.TabIndex = 72;
@@ -909,7 +897,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(6, 21);
+            this.label26.Location = new System.Drawing.Point(6, 41);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(63, 13);
             this.label26.TabIndex = 71;
@@ -930,7 +918,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(546, 460);
+            this.tabPage3.Size = new System.Drawing.Size(556, 460);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1399,7 +1387,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(546, 460);
+            this.tabPage4.Size = new System.Drawing.Size(556, 460);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1605,7 +1593,6 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "RegisterPatientTab";
             this.Text = "RegisterPatientTab";
-            this.Load += new System.EventHandler(this.RegisterPatientTab_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1629,7 +1616,7 @@
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.TextBox pemailIn;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button conAddButton;
+        private System.Windows.Forms.Button pconAddButton;
         private System.Windows.Forms.TextBox pconNumIn;
         private System.Windows.Forms.ComboBox pcontypeCoB;
         private System.Windows.Forms.Label label12;
@@ -1650,9 +1637,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox pnatIn;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox pyearIn;
-        private System.Windows.Forms.TextBox pdayIn;
-        private System.Windows.Forms.TextBox pmonthIn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox pmnameIn;
         private System.Windows.Forms.TextBox pfnameIn;
@@ -1687,9 +1671,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox cnatIn;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox cyearIn;
-        private System.Windows.Forms.TextBox cdayIn;
-        private System.Windows.Forms.TextBox cmonthIn;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox cmnameIn;
         private System.Windows.Forms.TextBox cfnameIn;
@@ -1761,10 +1742,12 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.CheckedListBox caseMgmtBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox primaryIn;
+        private System.Windows.Forms.CheckBox primaryCB;
+        private System.Windows.Forms.TextBox posIn;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Button acceptButton;
+        private System.Windows.Forms.DateTimePicker pbdayPick;
+        private System.Windows.Forms.DateTimePicker cbdayPick;
     }
 }

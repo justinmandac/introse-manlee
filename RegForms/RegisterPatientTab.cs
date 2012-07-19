@@ -20,7 +20,6 @@ namespace introseHHC.RegForms
         private Patient patient;
         private Client  client;
         private FaceSheet fsheet;
-        private Person s;
 
         private string desig;
         private string fname;
@@ -32,18 +31,16 @@ namespace introseHHC.RegForms
         private string civstat;
         private string educattain;
         private string email;
-        private Address address;
-        private Contact contact;
         //holders for birthdate fields
-        private UInt16 mm;
-        private UInt16 dd; //lol P. Diddy
-        private UInt16 yy;
+        private DateTime birthdate;
         //holders for address fields
         private string addline;
         private UInt16 stnumber;
         private string region;
         private string city;
-        
+        //holders for contact number fields
+        private string contactlabel;
+        private UInt16 contactnumber;
         
         public RegisterPatientTab()
         {
@@ -54,89 +51,56 @@ namespace introseHHC.RegForms
             this.tabPage3.Text = "Requirements";
             this.tabPage4.Text = "Details";
 
+           
             patient = new Patient();
             client  = new Client();
-            fsheet  = new FaceSheet();
-            address = new Address();
-            contact = new Contact();
-            
+            fsheet  = new FaceSheet();        
 
         }
 
-        private void caseMgmtCB_CheckedChanged(object sender, EventArgs e)
-        {
-            if (caseMgmtCB.Checked == false)
-            {
-                caseMgmtBox.Enabled = false;
-            }
-            else
-            {
-                caseMgmtBox.Enabled = true;
-            }
-            
-        }
-
-        private void hvacCB_CheckedChanged(object sender, EventArgs e)
-        {
-            if (hvacCB.Checked == false)
-            {
-                hvacCoB.Enabled = false;
-            }
-            else
-            {
-                hvacCoB.Enabled = true;
-            }
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked == true)
-            {                textBox1.Enabled = false;
-            }
-            else
-            {
-                textBox1.Enabled = true;
-            }
-        }
-        
         //save inputs to respective classes
         private void button1_Click(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedIndex == PATIENT_TAB || tabControl1.SelectedIndex == CLIENT_TAB)
+            Console.Write("Finish Button Clicked\n");
+            if (tabControl1.SelectedIndex == PATIENT_TAB)
             {
                 //Patient Tab
                 //get all the values in the fields & perform error checking
-                desig = pdesigCoB.SelectedText;
-                fname = pfnameIn.Text;
-                mname = pmnameIn.Text;
-                sname = psnameIn.Text;
 
-                //Get data from birthdate fields & check for errors
-                try
-                {
-                    mm = UInt16.Parse(pmonthIn.Text);
+                    desig = pdesigCoB.SelectedText;
+                    fname = pfnameIn.Text;
+                    sname = psnameIn.Text;
+                    mname = pmnameIn.Text;
+                //replace error checking with regular expressions.
+                    if (fname.Equals("First Name"))
+                    {
+                        Console.WriteLine("Enter Valid First Name");
+                    }
+                    else if (fname.Length == 0)
+                    {
+                        Console.Out.WriteLine("First Name Field is Empty");
+                    }
+  
+                    if (mname.Equals("Middle Name"))
+                    {
+                        Console.WriteLine("Enter Valid Middle Name");
+                    }
+                    else if (mname.Length == 0)
+                    {
+                        Console.Out.WriteLine("Middle Name Field is Empty");
+                    }
                     
-                }
-                catch (Exception err)
-                {
+                    if (sname.Equals("Surname"))
+                    {
+                        Console.WriteLine("Enter Valid Surname");
+                    }
+                    else if (fname.Length == 0)
+                    {
+                        Console.Out.WriteLine("Surname Field is Empty");
+                    }
 
-                }
-                try
-                {
-                    dd = UInt16.Parse(pdayIn.Text);
-                }
-                catch (Exception err)
-                {
-
-                }
-                try
-                {
-                    yy = UInt16.Parse(pyearIn.Text);
-                }
-                catch (Exception err)
-                {
-
-                }
+                //Get data from DateTime Picker
+                    birthdate = pbdayPick.Value;
                                
                 //following fields must not be blank
                 gender = pgenCoB.SelectedText;
@@ -155,18 +119,37 @@ namespace introseHHC.RegForms
                 }
                 catch (Exception err)
                 {
-
+                    Console.WriteLine("Street #: "+err.Message);
                 }
 
-                if (tabControl1.SelectedIndex == CLIENT_TAB)
+                //get contact number details
+                contactlabel = pcontypeCoB.SelectedText;
+                try
                 {
-
-
+                    contactnumber = UInt16.Parse(pconNumIn.Text);
                 }
+                catch(Exception err)
+                {
+                    Console.WriteLine("Contact Number: "+err.Message);
+                   
+                }
+                //get email
+                email = pemailIn.Text;
 
+                //add fields to Patient Object
+                patient.setName(desig,fname,mname,sname);
+                patient.setBday(birthdate);
+                patient.setGender(gender);
+                patient.setNationality(nationality);
+                patient.setReligion(religion);
+                patient.setCivilStatus(civstat);
+                patient.setEducAttainment(educattain);
+                patient.setEmail(email);
+        
+            }
+            else if (tabControl1.SelectedIndex == CLIENT_TAB)
+            {
 
-                                
-                
             }
             else if (tabControl1.SelectedIndex == REQUIREMENTS_TAB)
             {
@@ -178,14 +161,46 @@ namespace introseHHC.RegForms
             }
         }
 
-        private void pcityIn_TextChanged(object sender, EventArgs e)
+        private void pconAddButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void RegisterPatientTab_Load(object sender, EventArgs e)
+        private void caseMgmtCB_CheckedChanged(object sender, EventArgs e)
         {
+            if (caseMgmtCB.Checked == false)
+            {
+                caseMgmtBox.Enabled = false;
+            }
+            else
+            {
+                caseMgmtBox.Enabled = true;
+            }
 
+        }
+
+        private void hvacCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (hvacCB.Checked == false)
+            {
+                hvacCoB.Enabled = false;
+            }
+            else
+            {
+                hvacCoB.Enabled = true;
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (primaryCB.Checked == true)
+            {
+                primaryIn.Enabled = false;
+            }
+            else
+            {
+                primaryIn.Enabled = true;
+            }
         }
 
 

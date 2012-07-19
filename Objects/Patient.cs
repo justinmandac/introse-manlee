@@ -9,7 +9,11 @@ namespace introseHHC.Objects
     {
         public Patient()
         {
-
+            fname = sname = mname = "";
+            gender = civstat = "";
+            nationality = educattain = email = "";
+            age = 0;
+            address = null;
         }
     }
 }
