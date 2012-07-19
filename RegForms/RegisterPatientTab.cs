@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using introseHHC.Objects;
+using System.Text.RegularExpressions;
 
 namespace introseHHC.RegForms
 {
@@ -76,6 +77,7 @@ namespace introseHHC.RegForms
         //save inputs to respective classes
         private void finishButton_Click(object sender, EventArgs e)
         {
+            Regex expr = new Regex("[^a-z]",RegexOptions.IgnoreCase);
           
             if (tabControl1.SelectedIndex == PATIENT_TAB)
             {   
@@ -87,6 +89,11 @@ namespace introseHHC.RegForms
                     fname = pfnameIn.Text;
                     sname = psnameIn.Text;
                     mname = pmnameIn.Text;
+
+                    if (expr.IsMatch(pfnameIn.Text))
+                    {
+                        Console.WriteLine("Invalid String");
+                    }
 
                 //replace error checking with regular expressions.
                     if (fname.Equals("First Name"))
@@ -164,7 +171,7 @@ namespace introseHHC.RegForms
                     Console.WriteLine("No Contact Numbers entered!");
                 }
 
-                displayStuff(patient);
+                //displayStuff(patient);
         
             }
             else if (tabControl1.SelectedIndex == CLIENT_TAB)
