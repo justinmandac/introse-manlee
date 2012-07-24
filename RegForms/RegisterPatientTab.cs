@@ -8,11 +8,20 @@ using System.Text;
 using System.Windows.Forms;
 using introseHHC.Objects;
 using System.Text.RegularExpressions;
+using MySql.Data.MySqlClient;
 
 namespace introseHHC.RegForms
 {
     public partial class RegisterPatientTab : Form
     {
+        private MySqlConnection conn;
+        private MySqlCommand cmd;
+        private MySqlDataReader read;
+        private string server;
+        private string database;
+        private string user;
+        private string password;
+
         private const byte PATIENT_TAB = 0;
         private const byte CLIENT_TAB =  1;
         private const byte REQUIREMENTS_TAB = 2;
@@ -22,6 +31,7 @@ namespace introseHHC.RegForms
         private Client  client;
         private FaceSheet fsheet;
 
+        private int id = 0 ;
         private string desig;
         private string fname;
         private string sname;
@@ -52,11 +62,47 @@ namespace introseHHC.RegForms
             this.tabPage3.Text = "Requirements";
             this.tabPage4.Text = "Details";
 
-           
             patient = new Patient();
-            client  = new Client();
-            fsheet  = new FaceSheet();        
+            client = new Client();
+            fsheet = new FaceSheet();
 
+            server = "localhost";
+            user = "root";
+            database = "hhc-db";
+            password = "root";
+
+            string connString = "SERVER=" + server + ";" + "DATABASE=" +
+                                database + ";" + "UID=" + user + ";" + 
+                                "PASSWORD=" + password + ";";
+
+            conn = new MySqlConnection(connString);
+                     
+          }
+
+
+        private bool OpenConnection()
+        {
+            try
+            {
+                conn.Open();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+        private bool CloseConnection()
+        {
+            try
+            {
+                conn.Close();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
 
         private void displayStuff(Patient p)
@@ -242,6 +288,22 @@ namespace introseHHC.RegForms
                 primaryIn.Enabled = true;
             }
         }
+
+        private void acceptButton_Click(object sender, EventArgs e)
+        {
+            if (id < tabControl1.TabCount)
+                tabControl1.SelectedIndex = id++;
+            else
+                id = 0;
+        }
+
+        private void RegisterPatientTab_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (CloseConnection())
+                Console.WriteLine("SQL Connection Closed");
+            
+        }
+
 
 
 

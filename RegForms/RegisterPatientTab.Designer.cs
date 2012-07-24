@@ -189,6 +189,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.CausesValidation = false;
             this.tabPage1.Controls.Add(this.pbdayPick);
             this.tabPage1.Controls.Add(this.pemailIn);
             this.tabPage1.Controls.Add(this.label13);
@@ -1579,6 +1580,7 @@
             this.acceptButton.TabIndex = 5;
             this.acceptButton.Text = "Accept";
             this.acceptButton.UseVisualStyleBackColor = true;
+            this.acceptButton.Click += new System.EventHandler(this.acceptButton_Click);
             // 
             // RegisterPatientTab
             // 
@@ -1594,6 +1596,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RegisterPatientTab";
             this.Text = "RegisterPatientTab";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegisterPatientTab_FormClosed);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

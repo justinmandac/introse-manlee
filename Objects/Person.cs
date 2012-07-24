@@ -9,6 +9,7 @@ namespace introseHHC.Objects
     public class Person
     {
         protected Name name = new Name();
+        private int ID;
         protected string desig;
         protected string fname;
         protected string sname;
@@ -25,6 +26,7 @@ namespace introseHHC.Objects
         protected LinkedList<Contact> contactList;
         public Person()
         {
+            ID = 0;
             fname = sname = mname = "";
             gender = civstat = "";
             nationality = educattain = email = "";
@@ -43,6 +45,10 @@ namespace introseHHC.Objects
             civstat = cstat;
         }
       //Mutator methods
+        public void setID(int i)
+        {
+            ID = i;
+        }
         public void setName(string d,string f, string m, string s)
         {
             name.setDesignation(d);
@@ -96,6 +102,10 @@ namespace introseHHC.Objects
             address.setRegion(r);
         }
     //Getter methods
+        public int getID()
+        {
+            return ID;
+        }
         public Name getName()
             {
                 return name;
