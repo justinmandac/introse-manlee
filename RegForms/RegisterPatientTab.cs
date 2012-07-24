@@ -31,7 +31,6 @@ namespace introseHHC.RegForms
         private Client  client;
         private FaceSheet fsheet;
 
-        private int id = 0 ;
         private string desig;
         private string fname;
         private string sname;
@@ -50,8 +49,10 @@ namespace introseHHC.RegForms
         private string region;
         private string city;
         //holders for contact number fields
-        private string contactlabel;
-        private UInt16 contactnumber;
+        private UInt16 homeNum;
+        private UInt16 workNum;
+        private UInt16 mobNum;
+        private UInt16 otherNum;
         
         public RegisterPatientTab()
         {
@@ -104,6 +105,13 @@ namespace introseHHC.RegForms
                 return false;
             }
         }
+        private int checkName(string s, string f, string m)
+        {
+            
+
+            return 0;
+        }
+
 
         private void displayStuff(Patient p)
         {
@@ -116,108 +124,15 @@ namespace introseHHC.RegForms
             Console.WriteLine("Civil Status: "+patient.getCivilStatus());
             Console.WriteLine("Educational Attainment: "+patient.getEducAttainment());
 
-            Console.WriteLine("Address: "+patient.getAddress().getFullAddress());
+       
 
         }
-
         //save inputs to respective classes
         private void finishButton_Click(object sender, EventArgs e)
         {
-            Regex expr = new Regex("[^a-z]",RegexOptions.IgnoreCase);
-          
             if (tabControl1.SelectedIndex == PATIENT_TAB)
             {   
-                //Patient Tab
-                //get all the values in the fields & perform error checking
-                //commands below execute only when the Patient Information Tab is selected.
-
-                    desig = pdesigCoB.Text;
-                    fname = pfnameIn.Text;
-                    sname = psnameIn.Text;
-                    mname = pmnameIn.Text;
-
-                    if (expr.IsMatch(pfnameIn.Text))
-                    {
-                        Console.WriteLine("Invalid String");
-                    }
-
-                //replace error checking with regular expressions.
-                    if (fname.Equals("First Name"))
-                    {
-                        Console.WriteLine("Enter Valid First Name");
-                    }
-                    else if (fname.Length == 0)
-                    {
-                        Console.Out.WriteLine("First Name Field is Empty");
-                    }
-  
-                    if (mname.Equals("Middle Name"))
-                    {
-                        Console.WriteLine("Enter Valid Middle Name");
-                    }
-                    else if (mname.Length == 0)
-                    {
-                        Console.Out.WriteLine("Middle Name Field is Empty");
-                    }
-                    
-                    if (sname.Equals("Surname"))
-                    {
-                        Console.WriteLine("Enter Valid Surname");
-                    }
-                    else if (fname.Length == 0)
-                    {
-                        Console.Out.WriteLine("Surname Field is Empty");
-                    }
-
-                //Get data from DateTime Picker
-                    birthdate = pbdayPick.Value;
-                               
-                //following fields must not be blank
-                    gender = pgenCoB.Text;
-                    nationality = pnatIn.Text;
-                    religion = prelIn.Text;
-                    civstat = pcivStatCoB.Text;
-                    educattain = pedattCoB.Text;
-                //fields for address. must not be blank!
-                    addline = paddlineIn.Text;
-                    city = pcityIn.Text;
-                    region = pregIn.Text;
-
-                    try
-                    {
-                        stnumber = UInt16.Parse(pstnoIn.Text);
-                    }
-                    catch (FormatException err)
-                    {
-                        Console.WriteLine("Street #: " + err.Message);
-                    }
-                    catch (OverflowException of)
-                    {
-                        Console.WriteLine("Street #: "+of.Message);
-                    }
-
-
-                //get email
-                //needs regex based error checking
-                email = pemailIn.Text;
-
-                //add fields to Patient Object
-                patient.setName(desig,fname,mname,sname);
-                patient.setBday(birthdate);
-                patient.setGender(gender);
-                patient.setNationality(nationality);
-                patient.setReligion(religion);
-                patient.setCivilStatus(civstat);
-                patient.setEducAttainment(educattain);
-                patient.setEmail(email);
-                patient.setAddress(stnumber,addline,city,region);
-
-                if (patient.getContactNumbers().Count == 0)
-                {
-                    Console.WriteLine("No Contact Numbers entered!");
-                }
-
-                //displayStuff(patient);
+                
         
             }
             else if (tabControl1.SelectedIndex == CLIENT_TAB)
@@ -234,23 +149,6 @@ namespace introseHHC.RegForms
             }
         }
         //runs when the Add button for Contact information is clicked.
-        private void pconAddButton_Click(object sender, EventArgs e)
-        {
-
-            contactlabel = pcontypeCoB.Text;
-            try
-            {
-                contactnumber = UInt16.Parse(pconNumIn.Text);
-            }
-            catch (Exception err)
-            {
-                Console.WriteLine("Contact Number: " + err.Message);
-
-            }
-            patient.addContact(new Contact(contactlabel,contactnumber));
-            pconNumIn.Text = "";
-            
-        }
 
         private void caseMgmtCB_CheckedChanged(object sender, EventArgs e)
         {
@@ -264,7 +162,6 @@ namespace introseHHC.RegForms
             }
 
         }
-
         private void hvacCB_CheckedChanged(object sender, EventArgs e)
         {
             if (hvacCB.Checked == false)
@@ -276,7 +173,6 @@ namespace introseHHC.RegForms
                 hvacCoB.Enabled = true;
             }
         }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (primaryCB.Checked == true)
@@ -291,26 +187,128 @@ namespace introseHHC.RegForms
 
         private void acceptButton_Click(object sender, EventArgs e)
         {
-            if (id < tabControl1.TabCount)
-                tabControl1.SelectedIndex = id++;
-            else
-                id = 0;
+           
         }
 
         private void RegisterPatientTab_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (CloseConnection())
                 Console.WriteLine("SQL Connection Closed");
+
+        }
+
+        private void pNextButton_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex++;
+
+            //Patient Tab
+            //get all the values in the fields & perform error checking
+            //commands below execute only when the Patient Information Tab is selected.
+
+            desig = pdesigCoB.Text;
+            fname = pfnameIn.Text;
+            sname = psnameIn.Text;
+            mname = pmnameIn.Text;
+
+            checkName(fname, sname, mname); //replace error checking with regular expressions.
+            birthdate = pbdayPick.Value;             //Get data from DateTime Picker
+
+            //following fields must not be blank
+            gender = pgenCoB.Text;
+            nationality = pnatIn.Text;
+            religion = prelIn.Text;
+            civstat = pcivStatCoB.Text;
+            educattain = pedattCoB.Text;
+
+            //fields for address. must not be blank!
+            addline = paddlineIn.Text;
+            city = pcityIn.Text;
+            region = pregIn.Text;
+
+            try
+            {
+                stnumber = UInt16.Parse(pstnoIn.Text);
+            }
+            catch (FormatException err)
+            {
+                Console.WriteLine("Street #: " + err.Message);
+            }
+            catch (OverflowException of)
+            {
+                Console.WriteLine("Street #: " + of.Message);
+            }
+
+            try
+            {
+                workNum = UInt16.Parse(pWorkIn.Text);
+                homeNum = UInt16.Parse(pHomeIn.Text);
+                mobNum = UInt16.Parse(pMobileIn.Text);
+                otherNum = UInt16.Parse(pOtherIn.Text);
+            }
+            catch (Exception err)
+            {
+            }
+               
+
+
+            //get email
+            //needs regex based error checking
+            email = pemailIn.Text;
+
+            //add fields to Patient Object
+            patient.setName(desig, fname, mname, sname);
+            patient.setBday(birthdate);
+            patient.setGender(gender);
+            patient.setNationality(nationality);
+            patient.setReligion(religion);
+            patient.setCivilStatus(civstat);
+            patient.setEducAttainment(educattain);
+            patient.setEmail(email);
+            patient.setAddress(stnumber, addline, city, region);
+            patient.setNumbers(homeNum,workNum,mobNum,otherNum);
+            
+            //displayStuff(patient);
+
+            //open connection to database
+            if (OpenConnection())
+            {
+                string query = "INSERT INTO PERSON(DESIGNATION,SNAME,FNAME,MNAME,BDATE,GENDER,CIVSTAT,NATIONALITY,RELIGION,"+
+                "EDUCATTAIN,EMAIL,HOMENUM,WORKNUM,MOBNUM,OTHERNUM,STNUM,ADDLINE,CITY,REGION) VALUES "
+                +"(@desig,@sur,@first,@mid,@bday,@gen,@cstat,@nat,@rel,@edatt,@mail,@hnum,@wnum,@mnum,@onum,@stno,@aline,@ct,@reg)";
+
+                cmd = new MySqlCommand(query,conn);
+
+                cmd.Prepare();
+                
+                
+            }
+            else
+            {
+
+            }
+
+            //move to next tab
             
         }
-
-        private void RegisterPatientTab_Load(object sender, EventArgs e)
+        private void cNextButton_Click(object sender, EventArgs e)
         {
+            tabControl1.SelectedIndex++;
+        }
+        private void rNextButton_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex++;
+        }
 
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == PATIENT_TAB)
+            {
+
+            }
         }
 
 
-
+ 
 
 
     }
