@@ -34,9 +34,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.4.5\Assemblies\v2.0\MySql.Data.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -81,6 +85,12 @@
     <Compile Include="RegForms\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegForms\PatientView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegForms\PatientView.Designer.cs">
+      <DependentUpon>PatientView.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegForms\PersonalHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +102,24 @@
     </Compile>
     <Compile Include="RegForms\RegisterPatientTab.Designer.cs">
       <DependentUpon>RegisterPatientTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegForms\ManageRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegForms\ManageRecord.Designer.cs">
+      <DependentUpon>ManageRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegForms\ViewCGA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegForms\ViewCGA.Designer.cs">
+      <DependentUpon>ViewCGA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegForms\ViewFaceSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegForms\ViewFaceSheet.Designer.cs">
+      <DependentUpon>ViewFaceSheet.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="RegForms\CGAForm.resx">
       <DependentUpon>CGAForm.cs</DependentUpon>
@@ -114,11 +142,23 @@
     <EmbeddedResource Include="RegForms\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegForms\PatientView.resx">
+      <DependentUpon>PatientView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegForms\PersonalHistory.resx">
       <DependentUpon>PersonalHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegForms\RegisterPatientTab.resx">
       <DependentUpon>RegisterPatientTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegForms\ManageRecord.resx">
+      <DependentUpon>ManageRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegForms\ViewCGA.resx">
+      <DependentUpon>ViewCGA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegForms\ViewFaceSheet.resx">
+      <DependentUpon>ViewFaceSheet.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

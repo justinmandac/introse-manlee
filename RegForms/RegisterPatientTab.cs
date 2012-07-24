@@ -304,6 +304,11 @@ namespace introseHHC.RegForms
             
         }
 
+        private void RegisterPatientTab_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 

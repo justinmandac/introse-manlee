@@ -14,3 +14,17 @@ C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\intros
 C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.exe
 C:\Documents and Settings\Justin\My Documents\Visual Studio 2010\Projects\introseHHC\introseHHC\obj\x86\Debug\introseHHC.pdb
+C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\obj\x86\Debug\introseHHC.RegForms.CGAForm.resources
+C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\obj\x86\Debug\introseHHC.RegForms.FamilyHistory.resources
+C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\obj\x86\Debug\introseHHC.RegForms.Login.resources
+C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\obj\x86\Debug\introseHHC.Properties.Resources.resources
+C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\obj\x86\Debug\introseHHC.RegForms.MainMenu.resources
+C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\obj\x86\Debug\introseHHC.RegForms.PersonalHistory.resources
+C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\obj\x86\Debug\introseHHC.RegForms.RegisterPatientTab.resources
+C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\bin\Debug\introseHHC.exe
+C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\bin\Debug\introseHHC.pdb
+C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\obj\x86\Debug\introseHHC.RegForms.PatientView.resources
+C:\Users\JoshuaLee\Documents\Visual Studio 2010\Projects\introse-manlee\obj\x86\Debug\introseHHC.RegForms.ManageRecord.resources
