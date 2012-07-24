@@ -68,13 +68,13 @@
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label15 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.mndescCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mnansCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.label16 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -85,8 +85,8 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -478,27 +478,6 @@
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.dataGridView4);
-            this.tabPage5.Controls.Add(this.label16);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(558, 460);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(5, 7);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(135, 13);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Mini-Nutritional Assessment";
-            // 
             // dataGridView3
             // 
             this.dataGridView3.AllowUserToAddRows = false;
@@ -519,12 +498,43 @@
             this.mndescCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.mndescCol.HeaderText = " ";
             this.mndescCol.Name = "mndescCol";
+            this.mndescCol.ReadOnly = true;
             // 
             // mnansCol
             // 
             this.mnansCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.mnansCol.HeaderText = " ";
             this.mnansCol.Name = "mnansCol";
+            this.mnansCol.ReadOnly = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(5, 7);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(135, 13);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Mini-Nutritional Assessment";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.dataGridView4);
+            this.tabPage5.Controls.Add(this.label16);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(558, 460);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(10, 24);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.Size = new System.Drawing.Size(542, 251);
+            this.dataGridView4.TabIndex = 1;
             // 
             // label16
             // 
@@ -535,17 +545,9 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "Caregiver Assessment";
             // 
-            // dataGridView4
-            // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(10, 24);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(542, 251);
-            this.dataGridView4.TabIndex = 1;
-            // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(13, 120);
+            this.button9.Location = new System.Drawing.Point(12, 460);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 23);
             this.button9.TabIndex = 7;
@@ -594,9 +596,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
