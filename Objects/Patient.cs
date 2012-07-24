@@ -13,7 +13,9 @@ namespace introseHHC.Objects
             gender = civstat = "";
             nationality = educattain = email = "";
             age = 0;
-
+            address = null;
+            address = new Address();
+            contactList = new LinkedList<Contact>();
         }
     }
 }

@@ -9,6 +9,7 @@ namespace introseHHC.Objects
     public class Person
     {
         protected Name name = new Name();
+        private int ID;
         protected string desig;
         protected string fname;
         protected string sname;
@@ -21,26 +22,18 @@ namespace introseHHC.Objects
         protected string email;
         protected DateTime bday;
         protected UInt16 age;
-        //address fields
-        protected UInt16 stNum;
-        protected string addLine;
-        protected string city;
-        protected string region;
-        //contact fields
-        protected UInt16 homeNum;
-        protected UInt16 workNum;
-        protected UInt16 mobNum;
-        protected UInt16 otherNum;
-
+        protected Address address;
+        protected LinkedList<Contact> contactList;
         public Person()
         {
-          
+            ID = 0;
             fname = sname = mname = "";
             gender = civstat = "";
             nationality = educattain = email = "";
             age = 0;
-       
-               
+            address = new Address();
+            contactList = new LinkedList<Contact>();
+          
         }
         public Person(string fn,string sn, string mn, string gen,string nat, string cstat)
         {
@@ -52,7 +45,10 @@ namespace introseHHC.Objects
             civstat = cstat;
         }
       //Mutator methods
- 
+        public void setID(int i)
+        {
+            ID = i;
+        }
         public void setName(string d,string f, string m, string s)
         {
             name.setDesignation(d);
@@ -94,21 +90,22 @@ namespace introseHHC.Objects
         {
             email = e;
         }
+        public void addContact(Contact c)
+        {
+            contactList.AddLast(c);
+        }
         public void setAddress(UInt16 num, string a, string c, string r)
         {
-           stNum =  num;
-            addLine = a;
-            city = c;
-            region = r;
-        }
-        public void setNumbers(UInt16 home, UInt16 work, UInt16 mobile, UInt16 other)
-        {
-            this.mobNum = mobile;
-            this.homeNum = home;
-            this.workNum = work;
-            this.otherNum = other;
+            address.setStreetNo(num);
+            address.setAddLine(a);
+            address.setCity(c);
+            address.setRegion(r);
         }
     //Getter methods
+        public int getID()
+        {
+            return ID;
+        }
         public Name getName()
             {
                 return name;
@@ -117,22 +114,14 @@ namespace introseHHC.Objects
             {
                 return bday;
             }
-        public int getStNum()
-        {
-            return stNum;
-        }
-        public string getAddLine()
-        {
-            return addLine;
-        }
-        public string getCity()
-        {
-            return city;
-        }
-        public string getRegion()
-        {
-            return region;
-        }
+        public LinkedList<Contact> getContactNumbers()
+            {
+                return contactList;
+            }
+        public Address getAddress()
+            {
+                return address;
+            }
         public string getGender()
             {
                 return gender;
@@ -157,21 +146,6 @@ namespace introseHHC.Objects
             {
                 return email;
             }
-        public UInt16 getWorkNum()
-        {
-            return workNum;
-        }
-        public UInt16 getHomeNum()
-        {
-            return homeNum;
-        }
-        public UInt16 getMobNum()
-        {
-            return mobNum;
-        }
-        public UInt16 getOtherNum()
-        {
-            return otherNum;
-        }
+
     }
 }

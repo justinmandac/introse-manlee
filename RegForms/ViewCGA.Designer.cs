@@ -1,6 +1,6 @@
 ﻿namespace introseHHC.RegForms
 {
-    partial class CGAForm
+    partial class ViewCGA
     {
         /// <summary>
         /// Required designer variable.
@@ -68,13 +68,13 @@
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label15 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.mndescCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mnansCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.label16 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -85,8 +85,8 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,8 +94,8 @@
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(100, 498);
-            this.splitter1.TabIndex = 0;
+            this.splitter1.Size = new System.Drawing.Size(100, 486);
+            this.splitter1.TabIndex = 3;
             this.splitter1.TabStop = false;
             // 
             // tabControl1
@@ -105,11 +105,11 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(104, 12);
+            this.tabControl1.Location = new System.Drawing.Point(106, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(566, 486);
-            this.tabControl1.TabIndex = 1;
+            this.tabControl1.TabIndex = 4;
             // 
             // tabPage1
             // 
@@ -122,7 +122,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(558, 460);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Patient Information";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // panel1
@@ -416,7 +416,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(558, 460);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Geriatric Depression Scale";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dataGridView2
@@ -431,7 +431,6 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(543, 428);
             this.dataGridView2.TabIndex = 3;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // descCol
             // 
@@ -463,7 +462,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(558, 460);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Mini-mental Status Examination";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
@@ -475,29 +474,8 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(558, 460);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "Mini-nutrional Assessment";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.dataGridView4);
-            this.tabPage5.Controls.Add(this.label16);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(558, 460);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(5, 7);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(135, 13);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Mini-Nutritional Assessment";
             // 
             // dataGridView3
             // 
@@ -512,19 +490,49 @@
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.Size = new System.Drawing.Size(546, 428);
             this.dataGridView3.TabIndex = 1;
-            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // mndescCol
             // 
             this.mndescCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.mndescCol.HeaderText = " ";
             this.mndescCol.Name = "mndescCol";
+            this.mndescCol.ReadOnly = true;
             // 
             // mnansCol
             // 
             this.mnansCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.mnansCol.HeaderText = " ";
             this.mnansCol.Name = "mnansCol";
+            this.mnansCol.ReadOnly = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(5, 7);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(135, 13);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Mini-Nutritional Assessment";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.dataGridView4);
+            this.tabPage5.Controls.Add(this.label16);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(558, 460);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Caregiver Assessment";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(10, 24);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.Size = new System.Drawing.Size(542, 251);
+            this.dataGridView4.TabIndex = 1;
             // 
             // label16
             // 
@@ -535,54 +543,45 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "Caregiver Assessment";
             // 
-            // dataGridView4
-            // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(10, 24);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(542, 251);
-            this.dataGridView4.TabIndex = 1;
-            // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(13, 120);
+            this.button9.Location = new System.Drawing.Point(13, 48);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 7;
-            this.button9.Text = "Exit";
+            this.button9.TabIndex = 5;
+            this.button9.Text = "OK";
             this.button9.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(13, 80);
+            this.button10.Location = new System.Drawing.Point(13, 78);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(75, 23);
             this.button10.TabIndex = 6;
-            this.button10.Text = "Reset";
+            this.button10.Text = "Default";
             this.button10.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(13, 40);
+            this.button11.Location = new System.Drawing.Point(13, 108);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 5;
-            this.button11.Text = "Finish";
+            this.button11.TabIndex = 7;
+            this.button11.Text = "Reset";
             this.button11.UseVisualStyleBackColor = true;
             // 
-            // CGAForm
+            // ViewCGA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 498);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button10);
+            this.ClientSize = new System.Drawing.Size(672, 486);
             this.Controls.Add(this.button11);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.splitter1);
-            this.Name = "CGAForm";
-            this.Text = "CGAForm";
-            this.Load += new System.EventHandler(this.CGAForm_Load);
+            this.Name = "ViewCGA";
+            this.Text = "ViewCGA";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -594,9 +593,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
@@ -607,8 +606,25 @@
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn depCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn indCol;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -620,35 +636,18 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ansCol;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn actCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn depCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn indCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ansCol;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridViewTextBoxColumn mndescCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn mnansCol;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button9;
